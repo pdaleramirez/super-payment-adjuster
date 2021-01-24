@@ -12,7 +12,7 @@ trait Routes
     {
         Event::on(UrlManager::class, UrlManager::EVENT_REGISTER_CP_URL_RULES, function(RegisterUrlRulesEvent $event) {
             $event->rules['super-payment-adjuster/payment-adjusters'] = 'super-payment-adjuster/payment-adjuster/payment-adjuster-index';
-            $event->rules['super-payment-adjuster/payment-adjusters/new'] = 'super-payment-adjuster/payment-adjuster/edit';
+            $event->rules['super-payment-adjuster/payment-adjusters/<id:\d+|new>'] = 'super-payment-adjuster/payment-adjuster/edit';
         });
     }
 }

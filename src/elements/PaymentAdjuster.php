@@ -5,17 +5,37 @@ namespace pdaleramirez\superpaymentadjuster\elements;
 use Craft;
 use craft\base\Element;
 use craft\elements\db\ElementQueryInterface;
+use craft\helpers\UrlHelper;
 use pdaleramirez\superpaymentadjuster\elements\db\PaymentAdjusterQuery;
 use pdaleramirez\superpaymentadjuster\records\PaymentAdjuster as PaymentAdjusterRecord;
 use yii\base\Exception;
 
-class 
-PaymentAdjuster extends Element
+class PaymentAdjuster extends Element
 {
     public $handle;
     
     public $gatewayHandle;
     
+    public function __toString()
+    {
+        return (string) $this->title ?: (string) $this->id;
+    }
+
+    public static function hasTitles(): bool
+    {
+        return true;
+    }
+
+    public static function hasContent(): bool
+    {
+        return true;
+    }
+
+    public function getCpEditUrl()
+    {
+        return UrlHelper::cpUrl('super-payment-adjuster/payment-adjusters/' . $this->id);
+    }
+
     /**
      * @inheritdoc
      */
@@ -74,7 +94,7 @@ PaymentAdjuster extends Element
             $record = new PaymentAdjusterRecord();
             $record->id = $this->id;
         }
-        
+
         $record->save(false);
 
         $this->id = $record->id;

@@ -35,18 +35,40 @@ class PaymentAdjusterController extends Controller
         return $this->renderTemplate('super-payment-adjuster/payment-adjusters/_index');
     }
     
-    public function actionEdit()
+    public function actionEdit($id = null, PaymentAdjuster $element = null)
     {
-        return $this->renderTemplate('super-payment-adjuster/payment-adjusters/_edit');
+        if ($element == null) {
+     
+            if ($id == 'new') {
+                $element = new PaymentAdjuster();
+            
+            } else {
+                $element = Craft::$app->getElements()->getElementById($id, PaymentAdjuster::class);
+            }
+
+            if ($element == null) {
+                throw new \Exception("Invalid adjuster page");
+            }
+        }
+        
+   
+        return $this->renderTemplate('super-payment-adjuster/payment-adjusters/_edit', [
+            'element' => $element
+        ]);
     }
     
     public function actionSave()
     {
         $paymentAdjuster = new PaymentAdjuster();
-        
+        $paymentAdjuster->id = Craft::$app->getRequest()->getBodyParam('id');;
+
+        if ($paymentAdjuster->id) {
+            $paymentAdjuster = Craft::$app->getElements()->getElementById($paymentAdjuster->id, PaymentAdjuster::class);
+        }
+
         $paymentAdjuster->title = Craft::$app->getRequest()->getBodyParam('title');
         $paymentAdjuster->handle = Craft::$app->getRequest()->getBodyParam('handle');
-        
+
         if (!Craft::$app->getElements()->saveElement($paymentAdjuster)) {
             Craft::$app->getUrlManager()->setRouteParams([
                 'paymentAdjuster' => $paymentAdjuster

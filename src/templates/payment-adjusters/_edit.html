@@ -70,13 +70,17 @@
     {{ redirectInput('commerce/products') }}
     {{ csrfInput() }}
 
+    {% if element.id is not null %}
+        <input type="hidden" name="id" value="{{ element.id }}">
+    {% endif %}
+
     {{ forms.textField({
         label: "Title"|t('super-payment-adjuster'),
         id: 'title',
         name: 'title',
-        value: null,
+        value: element is defined ? element.title : null,
         autofocus: true,
-        errors: null
+        errors: element is defined ? element.getErrors('title') : null
     }) }}
     
     
