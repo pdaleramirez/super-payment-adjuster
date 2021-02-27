@@ -7,7 +7,7 @@ Craft.PaymentAdjusterIndex = Craft.BaseElementIndex.extend(
         init: function (elementType, $container, settings) {
             this.base(elementType, $container, settings);
             
-            var $btn = $('<a class="btn submit icon add" href="' + Craft.getUrl('super-payment-adjuster/payment-adjusters/new') + '">' + Craft.t('super-payment-adjuster', 'New Payment Adjuster') + '</a>');
+            var $btn = $('<a class="btn submit icon add" href="' + Craft.getUrl('super-payment-adjuster/payment-adjusters/edit/new') + '">' + Craft.t('super-payment-adjuster', 'New Payment Adjuster') + '</a>');
             this.addButton($btn);
         }
     }

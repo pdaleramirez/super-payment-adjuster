@@ -1,5 +1,3 @@
-{# @var product \craft\commerce\elements\Product #}
-
 {% extends "commerce/_layouts/cp" %}
 
 {% set selectedSubnavItem = "products" %}
@@ -29,7 +27,7 @@
 
 {% endblock %}
 
-
+{% set saveShortcutRedirect = continueEditingUrl %}
 {% block actionButton %}
     <div class="btngroup">
         <input type="submit" class="btn submit"
@@ -39,7 +37,7 @@
             <ul>
                 <li>
                     <a class="formsubmit"
-                       data-redirect="">
+                       data-redirect="{{ saveShortcutRedirect|hash }}">
                         {{ "Save and continue editing"|t('super-payment-adjuster') }}
                         {{ forms.optionShortcutLabel('S') }}
                     </a>
@@ -67,7 +65,7 @@
 {% block content %}
     <input type="hidden" name="action" value="super-payment-adjuster/payment-adjuster/save">
 
-    {{ redirectInput('commerce/products') }}
+    {{ redirectInput('super-payment-adjuster/payment-adjusters') }}
     {{ csrfInput() }}
 
     {% if element.id is not null %}
@@ -78,14 +76,104 @@
         label: "Title"|t('super-payment-adjuster'),
         id: 'title',
         name: 'title',
-        value: element is defined ? element.title : null,
+        value: element.title is defined ? element.title : null,
         autofocus: true,
         errors: element is defined ? element.getErrors('title') : null
     }) }}
-    
-    
-{% endblock %}
 
+    {{ forms.textField({
+        label: "Adjustment Name"|t('super-payment-adjuster'),
+        id: 'name',
+        name: 'name',
+        value: element.name is defined ? element.name : null,
+        autofocus: true,
+        errors: element is defined ? element.getErrors('name') : null
+    }) }}
+
+    {{ forms.textField({
+        label: "Handle"|t('super-payment-adjuster'),
+        id: 'handle',
+        name: 'handle',
+        value: element.handle is defined ? element.handle : null,
+        autofocus: true,
+        errors: element is defined ? element.getErrors('handle') : null
+    }) }}
+
+    {{ forms.textareaField({
+        label: "Description"|t('super-payment-adjuster'),
+        value: element.description is defined ? element.description : null,
+        name: 'description',
+        rows: 5
+    }) }}
+
+    {{ forms.selectField({
+        label: "Choose a gateway"|t('super-payment-adjuster'),
+        name: 'gatewayHandle',
+        options: gatewayOptions,
+        value: element.gatewayHandle is defined ? element.gatewayHandle : null,
+        errors: element is defined ? element.getErrors('gatewayHandle') : null
+    }) }}
+
+    {{ forms.selectField({
+        label: "Choose a method"|t('super-payment-adjuster'),
+        name: 'method',
+        options: element.getMethods(),
+        value: element.method is defined ? element.method : null,
+        errors: element is defined ? element.getErrors('method') : null
+    }) }}
+
+    {{ forms.selectField({
+        label: "Choose a type"|t('super-payment-adjuster'),
+        name: 'type',
+        options: typeOptions,
+        value: element.type is defined ? element.type : null,
+        errors: element is defined ? element.getErrors('type') : null
+    }) }}
+
+    {% set amountTypeInput %}
+        <div class="flex">
+            <div>
+                {{ forms.select({
+                    id: 'amount-type',
+                    name: 'amountType',
+                    options: element.getAmountTypes(),
+                    value: element.amountType,
+                    toggle: true,
+                    targetPrefix: 'to-option-'
+                }) }}
+            </div>
+            <div id="to-option-paymentAdjusterFlatAmount" class="flex-grow hidden">
+                {{ forms.text({
+                    id: 'baseAmount',
+                    name: 'baseAmount',
+                    value: element.baseAmount is defined ? element.baseAmount : '',
+                    placeholder: '',
+                    size: 10
+                }) }}
+            </div>
+            <div id="to-option-paymentAdjusterPercentAmount" class="flex-grow hidden">
+                {{ forms.text({
+                    id: 'percentAmount',
+                    name: 'percentAmount',
+                    value: element.percentAmount is defined ? element.percentAmount : '',
+                    placeholder: '',
+                    size: 10
+                }) }}
+            </div>
+        </div>
+    {% endset %}
+
+    {{ forms.field({
+        id: 'amount-type',
+        label: 'Amount Type'|t('super-payment-adjuster'),
+        instructions: ''|t('super-payment-adjuster'),
+        errors: element.getErrors('ambountType'),
+        required: true,
+    }, amountTypeInput) }}
+
+
+{% endblock %}
+{% js "new Craft.HandleGenerator('#title', '#handle');" %}
 
 {% block details %}
     <div class="meta">

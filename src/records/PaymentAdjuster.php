@@ -20,10 +20,10 @@ use craft\db\ActiveRecord;
  */
 class PaymentAdjuster extends ActiveRecord
 {
-    const TYPE_SHIPPING = 'paymentAdjusterTypeShipping';
-    const TYPE_ORDER = 'paymentAdjusterTypeOrder';
     const METHOD_ADD = 'paymentAdjusterMethodAdd';
-    const METHOD_SUBTRACT = 'paymentAdjusterMethodSubtract';
+    const METHOD_DEDUCT = 'paymentAdjusterMethodDeduct';
+    const AMOUNT_FLAT = 'paymentAdjusterFlatAmount';
+    const AMOUNT_PERCENT = 'paymentAdjusterPercentAmount';
     /**
      * @inheritdoc
      */

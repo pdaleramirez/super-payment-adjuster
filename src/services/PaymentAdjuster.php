@@ -10,7 +10,9 @@
 
 namespace pdaleramirez\superpaymentadjuster\services;
 
-use pdaleramirez\superpaymentadjuster\records\PaymentAdjuster as PaymentAdjusterRecord;
+use craft\commerce\adjusters\Discount;
+use craft\commerce\adjusters\Shipping;
+use craft\commerce\adjusters\Tax;
 use craft\base\Component;
 
 /**
@@ -24,8 +26,9 @@ class PaymentAdjuster extends Component
     public function getTypes(): array
     {
         return [
-          PaymentAdjusterRecord::TYPE_ORDER,  
-          PaymentAdjusterRecord::TYPE_SHIPPING  
+            Shipping::ADJUSTMENT_TYPE,
+            Discount::ADJUSTMENT_TYPE,
+            Tax::ADJUSTMENT_TYPE
         ];
     }
 }
