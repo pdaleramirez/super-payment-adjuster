@@ -76,6 +76,12 @@ class PaymentAdjuster extends Element
         ];
     }
 
+    public static function hasStatuses(): bool
+    {
+        return true;
+    }
+
+
     /**
      * @inheritdoc
      */

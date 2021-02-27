@@ -92,7 +92,7 @@ class PaymentAdjusterController extends Controller
         if ($paymentAdjuster->id) {
             $paymentAdjuster = Craft::$app->getElements()->getElementById($paymentAdjuster->id, PaymentAdjuster::class);
         }
-
+        $paymentAdjuster->enabled = Craft::$app->getRequest()->getBodyParam('enabled');
         $paymentAdjuster->title = Craft::$app->getRequest()->getBodyParam('title');
         $paymentAdjuster->name = Craft::$app->getRequest()->getBodyParam('name');
         $paymentAdjuster->handle = Craft::$app->getRequest()->getBodyParam('handle');
