@@ -1,6 +1,6 @@
 {
     "name": "pdaleramirez/super-payment-adjuster",
-    "description": "Add shipping or order cost based on the payment method selected",
+    "description": "Adds ability to adjust order amount based on the payment method selected.",
     "type": "craft-plugin",
     "version": "1.0.0",
     "keywords": [
