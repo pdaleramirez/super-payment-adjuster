@@ -15,7 +15,6 @@ use craft\events\RegisterComponentTypesEvent;
 use pdaleramirez\superpaymentadjuster\adjusters\PaymentMethodAdjuster;
 use pdaleramirez\superpaymentadjuster\plugin\Routes;
 use pdaleramirez\superpaymentadjuster\plugin\Services;
-use pdaleramirez\superpaymentadjuster\models\Settings;
 use Craft;
 use craft\base\Plugin;
 use yii\base\Event;
@@ -86,14 +85,6 @@ class SuperPaymentAdjuster extends Plugin
         ];
 
         return $ret;
-    }
-
-    /**
-     * @inheritdoc
-     */
-    protected function createSettingsModel()
-    {
-        return new Settings();
     }
 
     /**

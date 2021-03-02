@@ -1,0 +1,735 @@
+2021-03-02 07:02:37 [trace][yii\base\Application::bootstrap] Bootstrap with yii\shell\Bootstrap::bootstrap()
+2021-03-02 07:02:37 [info][yii\db\Connection::open] Opening DB connection: mysql:host=development_mysql;dbname=commerce_test;port=3306
+2021-03-02 07:02:37 [profile begin][yii\db\Connection::open] Opening DB connection: mysql:host=development_mysql;dbname=commerce_test;port=3306
+2021-03-02 07:02:37 [profile end][yii\db\Connection::open] Opening DB connection: mysql:host=development_mysql;dbname=commerce_test;port=3306
+2021-03-02 07:02:37 [info][yii\db\Command::query] SELECT *
+FROM `info`
+WHERE `id`=1
+LIMIT 1
+2021-03-02 07:02:37 [profile begin][yii\db\Command::query] SELECT *
+FROM `info`
+WHERE `id`=1
+LIMIT 1
+2021-03-02 07:02:37 [profile end][yii\db\Command::query] SELECT *
+FROM `info`
+WHERE `id`=1
+LIMIT 1
+2021-03-02 07:02:37 [info][yii\db\Command::query] SELECT `id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `installDate`, `licensedEdition`
+FROM `plugins`
+2021-03-02 07:02:37 [profile begin][yii\db\Command::query] SELECT `id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `installDate`, `licensedEdition`
+FROM `plugins`
+2021-03-02 07:02:37 [profile end][yii\db\Command::query] SELECT `id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `installDate`, `licensedEdition`
+FROM `plugins`
+2021-03-02 07:02:37 [info][yii\db\Command::query] SELECT `id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `installDate`, `licensedEdition`
+FROM `plugins`
+WHERE `handle`='super-payment-adjuster'
+LIMIT 1
+2021-03-02 07:02:37 [profile begin][yii\db\Command::query] SELECT `id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `installDate`, `licensedEdition`
+FROM `plugins`
+WHERE `handle`='super-payment-adjuster'
+LIMIT 1
+2021-03-02 07:02:37 [profile end][yii\db\Command::query] SELECT `id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `installDate`, `licensedEdition`
+FROM `plugins`
+WHERE `handle`='super-payment-adjuster'
+LIMIT 1
+2021-03-02 07:02:37 [trace][yii\db\Transaction::begin] Begin transaction
+2021-03-02 07:02:37 [info][yii\db\Command::execute] DELETE FROM `plugins` WHERE `handle`='super-payment-adjuster'
+2021-03-02 07:02:37 [profile begin][yii\db\Command::execute] DELETE FROM `plugins` WHERE `handle`='super-payment-adjuster'
+2021-03-02 07:02:37 [profile end][yii\db\Command::execute] DELETE FROM `plugins` WHERE `handle`='super-payment-adjuster'
+2021-03-02 07:02:37 [info][yii\db\Command::execute] DELETE FROM `migrations` WHERE `track`='plugin:super-payment-adjuster'
+2021-03-02 07:02:37 [profile begin][yii\db\Command::execute] DELETE FROM `migrations` WHERE `track`='plugin:super-payment-adjuster'
+2021-03-02 07:02:37 [profile end][yii\db\Command::execute] DELETE FROM `migrations` WHERE `track`='plugin:super-payment-adjuster'
+2021-03-02 07:02:37 [info][yii\db\Command::query] SHOW FULL COLUMNS FROM `plugins`
+2021-03-02 07:02:37 [profile begin][yii\db\Command::query] SHOW FULL COLUMNS FROM `plugins`
+2021-03-02 07:02:37 [profile end][yii\db\Command::query] SHOW FULL COLUMNS FROM `plugins`
+2021-03-02 07:02:37 [info][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`,
+    `rc`.`DELETE_RULE`,
+    `rc`.`UPDATE_RULE`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'plugins' AND `kcu`.`TABLE_NAME` = 'plugins'
+2021-03-02 07:02:37 [profile begin][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`,
+    `rc`.`DELETE_RULE`,
+    `rc`.`UPDATE_RULE`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'plugins' AND `kcu`.`TABLE_NAME` = 'plugins'
+2021-03-02 07:02:37 [profile end][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`,
+    `rc`.`DELETE_RULE`,
+    `rc`.`UPDATE_RULE`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'plugins' AND `kcu`.`TABLE_NAME` = 'plugins'
+2021-03-02 07:02:37 [info][yii\db\Command::execute] INSERT INTO `plugins` (`handle`, `version`, `schemaVersion`, `installDate`, `dateCreated`, `dateUpdated`, `uid`) VALUES ('super-payment-adjuster', '1.0.0', '1.0.0', '2021-03-02 15:02:37', '2021-03-02 15:02:37', '2021-03-02 15:02:37', '6519edf8-94ee-459f-97ee-abc3fd2549b8')
+2021-03-02 07:02:37 [profile begin][yii\db\Command::execute] INSERT INTO `plugins` (`handle`, `version`, `schemaVersion`, `installDate`, `dateCreated`, `dateUpdated`, `uid`) VALUES ('super-payment-adjuster', '1.0.0', '1.0.0', '2021-03-02 15:02:37', '2021-03-02 15:02:37', '2021-03-02 15:02:37', '6519edf8-94ee-459f-97ee-abc3fd2549b8')
+2021-03-02 07:02:37 [profile end][yii\db\Command::execute] INSERT INTO `plugins` (`handle`, `version`, `schemaVersion`, `installDate`, `dateCreated`, `dateUpdated`, `uid`) VALUES ('super-payment-adjuster', '1.0.0', '1.0.0', '2021-03-02 15:02:37', '2021-03-02 15:02:37', '2021-03-02 15:02:37', '6519edf8-94ee-459f-97ee-abc3fd2549b8')
+2021-03-02 07:02:37 [info][craft\db\MigrationManager::migrateUp] Applying Install
+2021-03-02 07:02:37 [trace][yii\db\Transaction::begin] Set savepoint 1
+2021-03-02 07:02:37 [info][yii\db\Command::execute] SAVEPOINT LEVEL1
+2021-03-02 07:02:37 [profile begin][yii\db\Command::execute] SAVEPOINT LEVEL1
+2021-03-02 07:02:37 [profile end][yii\db\Command::execute] SAVEPOINT LEVEL1
+2021-03-02 07:02:37 [info][yii\db\Command::query] SHOW FULL COLUMNS FROM `superpaymentadjuster_payment_adjuster`
+2021-03-02 07:02:37 [profile begin][yii\db\Command::query] SHOW FULL COLUMNS FROM `superpaymentadjuster_payment_adjuster`
+2021-03-02 07:02:37 [profile end][yii\db\Command::query] SHOW FULL COLUMNS FROM `superpaymentadjuster_payment_adjuster`
+2021-03-02 07:02:37 [info][yii\db\Command::execute] CREATE TABLE `superpaymentadjuster_payment_adjuster` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`name` varchar(255),
+	`handle` varchar(255),
+	`description` text,
+	`gatewayHandle` varchar(255),
+	`method` varchar(255) DEFAULT 'paymentAdjusterMethodAdd',
+	`type` varchar(255) DEFAULT 'shipping',
+	`amountType` varchar(255) DEFAULT 'baseAmount',
+	`baseAmount` decimal(14,4) NOT NULL DEFAULT 0,
+	`percentAmount` decimal(14,4) NOT NULL DEFAULT 0,
+	`dateCreated` datetime(0) NOT NULL,
+	`dateUpdated` datetime(0) NOT NULL,
+	`uid` char(36) NOT NULL DEFAULT '0'
+) ENGINE = InnoDb DEFAULT CHARACTER SET = utf8
+2021-03-02 07:02:37 [profile begin][yii\db\Command::execute] CREATE TABLE `superpaymentadjuster_payment_adjuster` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`name` varchar(255),
+	`handle` varchar(255),
+	`description` text,
+	`gatewayHandle` varchar(255),
+	`method` varchar(255) DEFAULT 'paymentAdjusterMethodAdd',
+	`type` varchar(255) DEFAULT 'shipping',
+	`amountType` varchar(255) DEFAULT 'baseAmount',
+	`baseAmount` decimal(14,4) NOT NULL DEFAULT 0,
+	`percentAmount` decimal(14,4) NOT NULL DEFAULT 0,
+	`dateCreated` datetime(0) NOT NULL,
+	`dateUpdated` datetime(0) NOT NULL,
+	`uid` char(36) NOT NULL DEFAULT '0'
+) ENGINE = InnoDb DEFAULT CHARACTER SET = utf8
+2021-03-02 07:02:37 [profile end][yii\db\Command::execute] CREATE TABLE `superpaymentadjuster_payment_adjuster` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`name` varchar(255),
+	`handle` varchar(255),
+	`description` text,
+	`gatewayHandle` varchar(255),
+	`method` varchar(255) DEFAULT 'paymentAdjusterMethodAdd',
+	`type` varchar(255) DEFAULT 'shipping',
+	`amountType` varchar(255) DEFAULT 'baseAmount',
+	`baseAmount` decimal(14,4) NOT NULL DEFAULT 0,
+	`percentAmount` decimal(14,4) NOT NULL DEFAULT 0,
+	`dateCreated` datetime(0) NOT NULL,
+	`dateUpdated` datetime(0) NOT NULL,
+	`uid` char(36) NOT NULL DEFAULT '0'
+) ENGINE = InnoDb DEFAULT CHARACTER SET = utf8
+2021-03-02 07:02:37 [info][yii\db\Command::execute] ALTER TABLE `superpaymentadjuster_payment_adjuster` ADD UNIQUE INDEX `idx_wmlufnjywadaniilfscokgtpdorrxntfztod` (`handle`)
+2021-03-02 07:02:37 [profile begin][yii\db\Command::execute] ALTER TABLE `superpaymentadjuster_payment_adjuster` ADD UNIQUE INDEX `idx_wmlufnjywadaniilfscokgtpdorrxntfztod` (`handle`)
+2021-03-02 07:02:37 [profile end][yii\db\Command::execute] ALTER TABLE `superpaymentadjuster_payment_adjuster` ADD UNIQUE INDEX `idx_wmlufnjywadaniilfscokgtpdorrxntfztod` (`handle`)
+2021-03-02 07:02:37 [trace][yii\db\Transaction::commit] Release savepoint 1
+2021-03-02 07:02:37 [info][yii\db\Command::execute] RELEASE SAVEPOINT LEVEL1
+2021-03-02 07:02:37 [profile begin][yii\db\Command::execute] RELEASE SAVEPOINT LEVEL1
+2021-03-02 07:02:37 [profile end][yii\db\Command::execute] RELEASE SAVEPOINT LEVEL1
+2021-03-02 07:02:37 [warning][craft\db\mysql\Schema::releaseSavepoint] Tried to release a savepoint, but it does not exist: SQLSTATE[42000]: Syntax error or access violation: 1305 SAVEPOINT LEVEL1 does not exist
+The SQL being executed was: RELEASE SAVEPOINT LEVEL1
+2021-03-02 07:02:37 [info][craft\db\MigrationManager::migrateUp] Applied Install (time: 0.386s).
+2021-03-02 07:02:37 [info][yii\db\Command::query] SHOW FULL COLUMNS FROM `migrations`
+2021-03-02 07:02:37 [profile begin][yii\db\Command::query] SHOW FULL COLUMNS FROM `migrations`
+2021-03-02 07:02:37 [profile end][yii\db\Command::query] SHOW FULL COLUMNS FROM `migrations`
+2021-03-02 07:02:37 [info][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`,
+    `rc`.`DELETE_RULE`,
+    `rc`.`UPDATE_RULE`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'migrations' AND `kcu`.`TABLE_NAME` = 'migrations'
+2021-03-02 07:02:37 [profile begin][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`,
+    `rc`.`DELETE_RULE`,
+    `rc`.`UPDATE_RULE`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'migrations' AND `kcu`.`TABLE_NAME` = 'migrations'
+2021-03-02 07:02:37 [profile end][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`,
+    `rc`.`DELETE_RULE`,
+    `rc`.`UPDATE_RULE`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'migrations' AND `kcu`.`TABLE_NAME` = 'migrations'
+2021-03-02 07:02:37 [info][yii\db\Command::execute] INSERT INTO `migrations` (`track`, `name`, `applyTime`, `dateCreated`, `dateUpdated`, `uid`) VALUES ('plugin:super-payment-adjuster', 'Install', '2021-03-02 15:02:37', '2021-03-02 15:02:37', '2021-03-02 15:02:37', '9b1312d8-2c8d-4112-bbbf-4d57faf657fe')
+2021-03-02 07:02:37 [profile begin][yii\db\Command::execute] INSERT INTO `migrations` (`track`, `name`, `applyTime`, `dateCreated`, `dateUpdated`, `uid`) VALUES ('plugin:super-payment-adjuster', 'Install', '2021-03-02 15:02:37', '2021-03-02 15:02:37', '2021-03-02 15:02:37', '9b1312d8-2c8d-4112-bbbf-4d57faf657fe')
+2021-03-02 07:02:37 [profile end][yii\db\Command::execute] INSERT INTO `migrations` (`track`, `name`, `applyTime`, `dateCreated`, `dateUpdated`, `uid`) VALUES ('plugin:super-payment-adjuster', 'Install', '2021-03-02 15:02:37', '2021-03-02 15:02:37', '2021-03-02 15:02:37', '9b1312d8-2c8d-4112-bbbf-4d57faf657fe')
+2021-03-02 07:02:37 [info][yii\db\Command::query] SHOW FULL COLUMNS FROM `migrations`
+2021-03-02 07:02:37 [profile begin][yii\db\Command::query] SHOW FULL COLUMNS FROM `migrations`
+2021-03-02 07:02:37 [profile end][yii\db\Command::query] SHOW FULL COLUMNS FROM `migrations`
+2021-03-02 07:02:37 [info][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`,
+    `rc`.`DELETE_RULE`,
+    `rc`.`UPDATE_RULE`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'migrations' AND `kcu`.`TABLE_NAME` = 'migrations'
+2021-03-02 07:02:37 [profile begin][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`,
+    `rc`.`DELETE_RULE`,
+    `rc`.`UPDATE_RULE`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'migrations' AND `kcu`.`TABLE_NAME` = 'migrations'
+2021-03-02 07:02:37 [profile end][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`,
+    `rc`.`DELETE_RULE`,
+    `rc`.`UPDATE_RULE`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'migrations' AND `kcu`.`TABLE_NAME` = 'migrations'
+2021-03-02 07:02:37 [info][yii\db\Command::query] SHOW FULL COLUMNS FROM `migrations`
+2021-03-02 07:02:37 [profile begin][yii\db\Command::query] SHOW FULL COLUMNS FROM `migrations`
+2021-03-02 07:02:37 [profile end][yii\db\Command::query] SHOW FULL COLUMNS FROM `migrations`
+2021-03-02 07:02:37 [info][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`,
+    `rc`.`DELETE_RULE`,
+    `rc`.`UPDATE_RULE`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'migrations' AND `kcu`.`TABLE_NAME` = 'migrations'
+2021-03-02 07:02:37 [profile begin][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`,
+    `rc`.`DELETE_RULE`,
+    `rc`.`UPDATE_RULE`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'migrations' AND `kcu`.`TABLE_NAME` = 'migrations'
+2021-03-02 07:02:37 [profile end][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`,
+    `rc`.`DELETE_RULE`,
+    `rc`.`UPDATE_RULE`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'migrations' AND `kcu`.`TABLE_NAME` = 'migrations'
+2021-03-02 07:02:37 [info][yii\db\Command::query] SELECT `name`, `applyTime`
+FROM `migrations`
+WHERE `track`='plugin:super-payment-adjuster'
+ORDER BY `name` DESC
+2021-03-02 07:02:37 [profile begin][yii\db\Command::query] SELECT `name`, `applyTime`
+FROM `migrations`
+WHERE `track`='plugin:super-payment-adjuster'
+ORDER BY `name` DESC
+2021-03-02 07:02:37 [profile end][yii\db\Command::query] SELECT `name`, `applyTime`
+FROM `migrations`
+WHERE `track`='plugin:super-payment-adjuster'
+ORDER BY `name` DESC
+2021-03-02 07:02:37 [trace][yii\db\Transaction::commit] Commit transaction
+2021-03-02 07:02:37 [info][yii\db\Command::query] SELECT EXISTS(SELECT *
+FROM `info`
+WHERE `id`=1)
+2021-03-02 07:02:37 [profile begin][yii\db\Command::query] SELECT EXISTS(SELECT *
+FROM `info`
+WHERE `id`=1)
+2021-03-02 07:02:37 [profile end][yii\db\Command::query] SELECT EXISTS(SELECT *
+FROM `info`
+WHERE `id`=1)
+2021-03-02 07:02:37 [info][yii\db\Command::query] SHOW FULL COLUMNS FROM `info`
+2021-03-02 07:02:37 [profile begin][yii\db\Command::query] SHOW FULL COLUMNS FROM `info`
+2021-03-02 07:02:37 [profile end][yii\db\Command::query] SHOW FULL COLUMNS FROM `info`
+2021-03-02 07:02:37 [info][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`,
+    `rc`.`DELETE_RULE`,
+    `rc`.`UPDATE_RULE`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'info' AND `kcu`.`TABLE_NAME` = 'info'
+2021-03-02 07:02:37 [profile begin][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`,
+    `rc`.`DELETE_RULE`,
+    `rc`.`UPDATE_RULE`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'info' AND `kcu`.`TABLE_NAME` = 'info'
+2021-03-02 07:02:37 [profile end][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`,
+    `rc`.`DELETE_RULE`,
+    `rc`.`UPDATE_RULE`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'info' AND `kcu`.`TABLE_NAME` = 'info'
+2021-03-02 07:02:37 [info][yii\db\Command::execute] UPDATE `info` SET `configVersion`='kyjvmatktpej', `dateUpdated`='2021-03-02 15:02:37' WHERE `id`=1
+2021-03-02 07:02:37 [profile begin][yii\db\Command::execute] UPDATE `info` SET `configVersion`='kyjvmatktpej', `dateUpdated`='2021-03-02 15:02:37' WHERE `id`=1
+2021-03-02 07:02:38 [profile end][yii\db\Command::execute] UPDATE `info` SET `configVersion`='kyjvmatktpej', `dateUpdated`='2021-03-02 15:02:37' WHERE `id`=1
+2021-03-02 07:02:38 [info][yii\db\Command::query] SELECT GET_LOCK('626dafbbbebe09a68e97b781b5ea0c5bf03b2843', 0)
+2021-03-02 07:02:38 [profile begin][yii\db\Command::query] SELECT GET_LOCK('626dafbbbebe09a68e97b781b5ea0c5bf03b2843', 0)
+2021-03-02 07:02:38 [profile end][yii\db\Command::query] SELECT GET_LOCK('626dafbbbebe09a68e97b781b5ea0c5bf03b2843', 0)
+2021-03-02 07:02:38 [info][yii\db\Command::query] SELECT RELEASE_LOCK('626dafbbbebe09a68e97b781b5ea0c5bf03b2843')
+2021-03-02 07:02:38 [profile begin][yii\db\Command::query] SELECT RELEASE_LOCK('626dafbbbebe09a68e97b781b5ea0c5bf03b2843')
+2021-03-02 07:02:38 [profile end][yii\db\Command::query] SELECT RELEASE_LOCK('626dafbbbebe09a68e97b781b5ea0c5bf03b2843')
+2021-03-02 07:02:38 [info][yii\db\Command::query] SELECT GET_LOCK('b4443b9d55223eb14003ee742ca5e35e01db1243', 2)
+2021-03-02 07:02:38 [profile begin][yii\db\Command::query] SELECT GET_LOCK('b4443b9d55223eb14003ee742ca5e35e01db1243', 2)
+2021-03-02 07:02:38 [profile end][yii\db\Command::query] SELECT GET_LOCK('b4443b9d55223eb14003ee742ca5e35e01db1243', 2)
+2021-03-02 07:02:38 [info][yii\db\Command::query] SELECT RELEASE_LOCK('b4443b9d55223eb14003ee742ca5e35e01db1243')
+2021-03-02 07:02:38 [profile begin][yii\db\Command::query] SELECT RELEASE_LOCK('b4443b9d55223eb14003ee742ca5e35e01db1243')
+2021-03-02 07:02:38 [profile end][yii\db\Command::query] SELECT RELEASE_LOCK('b4443b9d55223eb14003ee742ca5e35e01db1243')
+2021-03-02 07:02:38 [info][yii\db\Command::execute] DELETE FROM `projectconfig` WHERE `path`='dateModified'
+2021-03-02 07:02:38 [profile begin][yii\db\Command::execute] DELETE FROM `projectconfig` WHERE `path`='dateModified'
+2021-03-02 07:02:38 [profile end][yii\db\Command::execute] DELETE FROM `projectconfig` WHERE `path`='dateModified'
+2021-03-02 07:02:38 [info][yii\db\Command::execute] DELETE FROM `projectconfig` WHERE `path`='dateModified'
+2021-03-02 07:02:38 [profile begin][yii\db\Command::execute] DELETE FROM `projectconfig` WHERE `path`='dateModified'
+2021-03-02 07:02:38 [profile end][yii\db\Command::execute] DELETE FROM `projectconfig` WHERE `path`='dateModified'
+2021-03-02 07:02:38 [info][yii\db\Command::query] SHOW FULL COLUMNS FROM `projectconfig`
+2021-03-02 07:02:38 [profile begin][yii\db\Command::query] SHOW FULL COLUMNS FROM `projectconfig`
+2021-03-02 07:02:38 [profile end][yii\db\Command::query] SHOW FULL COLUMNS FROM `projectconfig`
+2021-03-02 07:02:38 [info][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`,
+    `rc`.`DELETE_RULE`,
+    `rc`.`UPDATE_RULE`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'projectconfig' AND `kcu`.`TABLE_NAME` = 'projectconfig'
+2021-03-02 07:02:38 [profile begin][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`,
+    `rc`.`DELETE_RULE`,
+    `rc`.`UPDATE_RULE`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'projectconfig' AND `kcu`.`TABLE_NAME` = 'projectconfig'
+2021-03-02 07:02:38 [profile end][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`,
+    `rc`.`DELETE_RULE`,
+    `rc`.`UPDATE_RULE`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'projectconfig' AND `kcu`.`TABLE_NAME` = 'projectconfig'
+2021-03-02 07:02:38 [info][yii\db\Command::execute] INSERT INTO `projectconfig` (`path`, `value`) VALUES ('dateModified', '1614697357')
+2021-03-02 07:02:38 [profile begin][yii\db\Command::execute] INSERT INTO `projectconfig` (`path`, `value`) VALUES ('dateModified', '1614697357')
+2021-03-02 07:02:38 [profile end][yii\db\Command::execute] INSERT INTO `projectconfig` (`path`, `value`) VALUES ('dateModified', '1614697357')
+2021-03-02 07:02:38 [info][yii\db\Command::execute] DELETE FROM `projectconfig` WHERE `path` IN ('plugins.super-payment-adjuster.edition', 'plugins.super-payment-adjuster.enabled', 'plugins.super-payment-adjuster.schemaVersion')
+2021-03-02 07:02:38 [profile begin][yii\db\Command::execute] DELETE FROM `projectconfig` WHERE `path` IN ('plugins.super-payment-adjuster.edition', 'plugins.super-payment-adjuster.enabled', 'plugins.super-payment-adjuster.schemaVersion')
+2021-03-02 07:02:38 [profile end][yii\db\Command::execute] DELETE FROM `projectconfig` WHERE `path` IN ('plugins.super-payment-adjuster.edition', 'plugins.super-payment-adjuster.enabled', 'plugins.super-payment-adjuster.schemaVersion')
+2021-03-02 07:02:38 [info][yii\db\Command::execute] DELETE FROM `projectconfig` WHERE `path`='plugins.super-payment-adjuster'
+2021-03-02 07:02:38 [profile begin][yii\db\Command::execute] DELETE FROM `projectconfig` WHERE `path`='plugins.super-payment-adjuster'
+2021-03-02 07:02:38 [profile end][yii\db\Command::execute] DELETE FROM `projectconfig` WHERE `path`='plugins.super-payment-adjuster'
+2021-03-02 07:02:38 [info][yii\db\Command::execute] INSERT INTO `projectconfig` (`path`, `value`) VALUES ('plugins.super-payment-adjuster.edition', '\"standard\"'), ('plugins.super-payment-adjuster.enabled', 'true'), ('plugins.super-payment-adjuster.schemaVersion', '\"1.0.0\"')
+2021-03-02 07:02:38 [profile begin][yii\db\Command::execute] INSERT INTO `projectconfig` (`path`, `value`) VALUES ('plugins.super-payment-adjuster.edition', '\"standard\"'), ('plugins.super-payment-adjuster.enabled', 'true'), ('plugins.super-payment-adjuster.schemaVersion', '\"1.0.0\"')
+2021-03-02 07:02:38 [profile end][yii\db\Command::execute] INSERT INTO `projectconfig` (`path`, `value`) VALUES ('plugins.super-payment-adjuster.edition', '\"standard\"'), ('plugins.super-payment-adjuster.enabled', 'true'), ('plugins.super-payment-adjuster.schemaVersion', '\"1.0.0\"')
+2021-03-02 07:02:38 [info][yii\db\Command::query] SHOW FULL COLUMNS FROM `deprecationerrors`
+2021-03-02 07:02:38 [profile begin][yii\db\Command::query] SHOW FULL COLUMNS FROM `deprecationerrors`
+2021-03-02 07:02:38 [profile end][yii\db\Command::query] SHOW FULL COLUMNS FROM `deprecationerrors`
+2021-03-02 07:02:38 [info][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`,
+    `rc`.`DELETE_RULE`,
+    `rc`.`UPDATE_RULE`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'deprecationerrors' AND `kcu`.`TABLE_NAME` = 'deprecationerrors'
+2021-03-02 07:02:38 [profile begin][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`,
+    `rc`.`DELETE_RULE`,
+    `rc`.`UPDATE_RULE`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'deprecationerrors' AND `kcu`.`TABLE_NAME` = 'deprecationerrors'
+2021-03-02 07:02:38 [profile end][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`,
+    `rc`.`DELETE_RULE`,
+    `rc`.`UPDATE_RULE`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'deprecationerrors' AND `kcu`.`TABLE_NAME` = 'deprecationerrors'
+2021-03-02 07:02:38 [info][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `tc`.`CONSTRAINT_TYPE` AS `type`,
+    CASE
+        WHEN NULL IS NULL AND `kcu`.`REFERENCED_TABLE_SCHEMA` = DATABASE() THEN NULL
+        ELSE `kcu`.`REFERENCED_TABLE_SCHEMA`
+    END AS `foreign_table_schema`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `foreign_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `foreign_column_name`,
+    `rc`.`UPDATE_RULE` AS `on_update`,
+    `rc`.`DELETE_RULE` AS `on_delete`,
+    `kcu`.`ORDINAL_POSITION` AS `position`
+FROM
+    `information_schema`.`KEY_COLUMN_USAGE` AS `kcu`,
+    `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`,
+    `information_schema`.`TABLE_CONSTRAINTS` AS `tc`
+WHERE
+    `kcu`.`TABLE_SCHEMA` = COALESCE(NULL, DATABASE()) AND `kcu`.`CONSTRAINT_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `kcu`.`TABLE_NAME` = 'deprecationerrors'
+    AND `rc`.`CONSTRAINT_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `rc`.`TABLE_NAME` = 'deprecationerrors' AND `rc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME`
+    AND `tc`.`TABLE_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `tc`.`TABLE_NAME` = 'deprecationerrors' AND `tc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME` AND `tc`.`CONSTRAINT_TYPE` = 'FOREIGN KEY'
+UNION
+SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `tc`.`CONSTRAINT_TYPE` AS `type`,
+    NULL AS `foreign_table_schema`,
+    NULL AS `foreign_table_name`,
+    NULL AS `foreign_column_name`,
+    NULL AS `on_update`,
+    NULL AS `on_delete`,
+    `kcu`.`ORDINAL_POSITION` AS `position`
+FROM
+    `information_schema`.`KEY_COLUMN_USAGE` AS `kcu`,
+    `information_schema`.`TABLE_CONSTRAINTS` AS `tc`
+WHERE
+    `kcu`.`TABLE_SCHEMA` = COALESCE(NULL, DATABASE()) AND `kcu`.`TABLE_NAME` = 'deprecationerrors'
+    AND `tc`.`TABLE_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `tc`.`TABLE_NAME` = 'deprecationerrors' AND `tc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME` AND `tc`.`CONSTRAINT_TYPE` IN ('PRIMARY KEY', 'UNIQUE')
+ORDER BY `position` ASC
+2021-03-02 07:02:38 [profile begin][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `tc`.`CONSTRAINT_TYPE` AS `type`,
+    CASE
+        WHEN NULL IS NULL AND `kcu`.`REFERENCED_TABLE_SCHEMA` = DATABASE() THEN NULL
+        ELSE `kcu`.`REFERENCED_TABLE_SCHEMA`
+    END AS `foreign_table_schema`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `foreign_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `foreign_column_name`,
+    `rc`.`UPDATE_RULE` AS `on_update`,
+    `rc`.`DELETE_RULE` AS `on_delete`,
+    `kcu`.`ORDINAL_POSITION` AS `position`
+FROM
+    `information_schema`.`KEY_COLUMN_USAGE` AS `kcu`,
+    `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`,
+    `information_schema`.`TABLE_CONSTRAINTS` AS `tc`
+WHERE
+    `kcu`.`TABLE_SCHEMA` = COALESCE(NULL, DATABASE()) AND `kcu`.`CONSTRAINT_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `kcu`.`TABLE_NAME` = 'deprecationerrors'
+    AND `rc`.`CONSTRAINT_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `rc`.`TABLE_NAME` = 'deprecationerrors' AND `rc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME`
+    AND `tc`.`TABLE_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `tc`.`TABLE_NAME` = 'deprecationerrors' AND `tc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME` AND `tc`.`CONSTRAINT_TYPE` = 'FOREIGN KEY'
+UNION
+SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `tc`.`CONSTRAINT_TYPE` AS `type`,
+    NULL AS `foreign_table_schema`,
+    NULL AS `foreign_table_name`,
+    NULL AS `foreign_column_name`,
+    NULL AS `on_update`,
+    NULL AS `on_delete`,
+    `kcu`.`ORDINAL_POSITION` AS `position`
+FROM
+    `information_schema`.`KEY_COLUMN_USAGE` AS `kcu`,
+    `information_schema`.`TABLE_CONSTRAINTS` AS `tc`
+WHERE
+    `kcu`.`TABLE_SCHEMA` = COALESCE(NULL, DATABASE()) AND `kcu`.`TABLE_NAME` = 'deprecationerrors'
+    AND `tc`.`TABLE_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `tc`.`TABLE_NAME` = 'deprecationerrors' AND `tc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME` AND `tc`.`CONSTRAINT_TYPE` IN ('PRIMARY KEY', 'UNIQUE')
+ORDER BY `position` ASC
+2021-03-02 07:02:38 [profile end][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `tc`.`CONSTRAINT_TYPE` AS `type`,
+    CASE
+        WHEN NULL IS NULL AND `kcu`.`REFERENCED_TABLE_SCHEMA` = DATABASE() THEN NULL
+        ELSE `kcu`.`REFERENCED_TABLE_SCHEMA`
+    END AS `foreign_table_schema`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `foreign_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `foreign_column_name`,
+    `rc`.`UPDATE_RULE` AS `on_update`,
+    `rc`.`DELETE_RULE` AS `on_delete`,
+    `kcu`.`ORDINAL_POSITION` AS `position`
+FROM
+    `information_schema`.`KEY_COLUMN_USAGE` AS `kcu`,
+    `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`,
+    `information_schema`.`TABLE_CONSTRAINTS` AS `tc`
+WHERE
+    `kcu`.`TABLE_SCHEMA` = COALESCE(NULL, DATABASE()) AND `kcu`.`CONSTRAINT_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `kcu`.`TABLE_NAME` = 'deprecationerrors'
+    AND `rc`.`CONSTRAINT_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `rc`.`TABLE_NAME` = 'deprecationerrors' AND `rc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME`
+    AND `tc`.`TABLE_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `tc`.`TABLE_NAME` = 'deprecationerrors' AND `tc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME` AND `tc`.`CONSTRAINT_TYPE` = 'FOREIGN KEY'
+UNION
+SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `tc`.`CONSTRAINT_TYPE` AS `type`,
+    NULL AS `foreign_table_schema`,
+    NULL AS `foreign_table_name`,
+    NULL AS `foreign_column_name`,
+    NULL AS `on_update`,
+    NULL AS `on_delete`,
+    `kcu`.`ORDINAL_POSITION` AS `position`
+FROM
+    `information_schema`.`KEY_COLUMN_USAGE` AS `kcu`,
+    `information_schema`.`TABLE_CONSTRAINTS` AS `tc`
+WHERE
+    `kcu`.`TABLE_SCHEMA` = COALESCE(NULL, DATABASE()) AND `kcu`.`TABLE_NAME` = 'deprecationerrors'
+    AND `tc`.`TABLE_SCHEMA` = `kcu`.`TABLE_SCHEMA` AND `tc`.`TABLE_NAME` = 'deprecationerrors' AND `tc`.`CONSTRAINT_NAME` = `kcu`.`CONSTRAINT_NAME` AND `tc`.`CONSTRAINT_TYPE` IN ('PRIMARY KEY', 'UNIQUE')
+ORDER BY `position` ASC
+2021-03-02 07:02:38 [info][yii\db\Command::query] SELECT
+    `s`.`INDEX_NAME` AS `name`,
+    `s`.`COLUMN_NAME` AS `column_name`,
+    `s`.`NON_UNIQUE` ^ 1 AS `index_is_unique`,
+    `s`.`INDEX_NAME` = 'PRIMARY' AS `index_is_primary`
+FROM `information_schema`.`STATISTICS` AS `s`
+WHERE `s`.`TABLE_SCHEMA` = COALESCE(NULL, DATABASE()) AND `s`.`INDEX_SCHEMA` = `s`.`TABLE_SCHEMA` AND `s`.`TABLE_NAME` = 'deprecationerrors'
+ORDER BY `s`.`SEQ_IN_INDEX` ASC
+2021-03-02 07:02:38 [profile begin][yii\db\Command::query] SELECT
+    `s`.`INDEX_NAME` AS `name`,
+    `s`.`COLUMN_NAME` AS `column_name`,
+    `s`.`NON_UNIQUE` ^ 1 AS `index_is_unique`,
+    `s`.`INDEX_NAME` = 'PRIMARY' AS `index_is_primary`
+FROM `information_schema`.`STATISTICS` AS `s`
+WHERE `s`.`TABLE_SCHEMA` = COALESCE(NULL, DATABASE()) AND `s`.`INDEX_SCHEMA` = `s`.`TABLE_SCHEMA` AND `s`.`TABLE_NAME` = 'deprecationerrors'
+ORDER BY `s`.`SEQ_IN_INDEX` ASC
+2021-03-02 07:02:38 [profile end][yii\db\Command::query] SELECT
+    `s`.`INDEX_NAME` AS `name`,
+    `s`.`COLUMN_NAME` AS `column_name`,
+    `s`.`NON_UNIQUE` ^ 1 AS `index_is_unique`,
+    `s`.`INDEX_NAME` = 'PRIMARY' AS `index_is_primary`
+FROM `information_schema`.`STATISTICS` AS `s`
+WHERE `s`.`TABLE_SCHEMA` = COALESCE(NULL, DATABASE()) AND `s`.`INDEX_SCHEMA` = `s`.`TABLE_SCHEMA` AND `s`.`TABLE_NAME` = 'deprecationerrors'
+ORDER BY `s`.`SEQ_IN_INDEX` ASC
+2021-03-02 07:02:38 [info][yii\db\Command::execute] INSERT INTO `deprecationerrors` (`lastOccurrence`, `file`, `line`, `message`, `traces`, `dateCreated`, `dateUpdated`, `uid`, `key`, `fingerprint`) VALUES ('2021-03-02 15:02:37', '/var/www/site/commerce3/local/craftcms/cms/src/services/Config.php', 168, 'The auto-generated validation key stored at `/var/www/site/commerce3/local/pdaleramirez/super-payment-adjuster/tests/_craft/storage/runtime/validation.key` has been deprecated. Copy its value to the `securityKey` config setting in `config/general.php`.', '[{\"objectClass\":\"craft\\\\services\\\\Deprecator\",\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/services/Config.php\",\"line\":118,\"class\":\"craft\\\\services\\\\Deprecator\",\"method\":\"log\",\"args\":\"\\\"validation.key\\\", \\\"The auto-generated validation key stored at `/var/www/site/comme...\\\"\"},{\"objectClass\":\"craft\\\\services\\\\Config\",\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/services/Config.php\",\"line\":168,\"class\":\"craft\\\\services\\\\Config\",\"method\":\"getConfigSettings\",\"args\":\"\\\"general\\\"\"},{\"objectClass\":\"craft\\\\services\\\\Config\",\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/helpers/App.php\",\"line\":683,\"class\":\"craft\\\\services\\\\Config\",\"method\":\"getGeneral\",\"args\":null},{\"objectClass\":null,\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/config/app.web.php\",\"line\":11,\"class\":\"craft\\\\helpers\\\\App\",\"method\":\"webRequestConfig\",\"args\":null},{\"objectClass\":null,\"file\":null,\"line\":null,\"class\":\"craft\\\\test\\\\TestSetup\",\"method\":\"{closure}\",\"args\":null},{\"objectClass\":null,\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/di/Container.php\",\"line\":631,\"class\":null,\"method\":\"call_user_func_array\",\"args\":\"Closure, []\"},{\"objectClass\":\"yii\\\\di\\\\Container\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/BaseYii.php\",\"line\":349,\"class\":\"yii\\\\di\\\\Container\",\"method\":\"invoke\",\"args\":\"Closure, []\"},{\"objectClass\":null,\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/di/ServiceLocator.php\",\"line\":137,\"class\":\"yii\\\\BaseYii\",\"method\":\"createObject\",\"args\":\"Closure\"},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/base/Module.php\",\"line\":748,\"class\":\"yii\\\\di\\\\ServiceLocator\",\"method\":\"get\",\"args\":\"\\\"request\\\", true\"},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/web/Application.php\",\"line\":324,\"class\":\"yii\\\\base\\\\Module\",\"method\":\"get\",\"args\":\"\\\"request\\\", true\"},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/web/Application.php\",\"line\":161,\"class\":\"craft\\\\web\\\\Application\",\"method\":\"get\",\"args\":\"\\\"request\\\"\"},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/base/ApplicationTrait.php\",\"line\":1409,\"class\":\"yii\\\\web\\\\Application\",\"method\":\"getRequest\",\"args\":null},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/web/Application.php\",\"line\":90,\"class\":\"craft\\\\web\\\\Application\",\"method\":\"_preInit\",\"args\":null},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/base/BaseObject.php\",\"line\":109,\"class\":\"craft\\\\web\\\\Application\",\"method\":\"init\",\"args\":null},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/base/Application.php\",\"line\":212,\"class\":\"yii\\\\base\\\\BaseObject\",\"method\":\"__construct\",\"args\":\"[\\\"components\\\" => [\\\"config\\\" => craft\\\\services\\\\Config, \\\"api\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Api\\\"], \\\"assets\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Assets\\\"], \\\"assetIndexer\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\AssetIndexer\\\"], ...], \\\"id\\\" => \\\"craft-test\\\", \\\"name\\\" => \\\"Craft CMS\\\", \\\"version\\\" => \\\"3.6.6\\\", ...]\"},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":null,\"line\":null,\"class\":\"yii\\\\base\\\\Application\",\"method\":\"__construct\",\"args\":\"[\\\"components\\\" => [\\\"config\\\" => craft\\\\services\\\\Config, \\\"api\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Api\\\"], \\\"assets\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Assets\\\"], \\\"assetIndexer\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\AssetIndexer\\\"], ...], \\\"id\\\" => \\\"craft-test\\\", \\\"name\\\" => \\\"Craft CMS\\\", \\\"version\\\" => \\\"3.6.6\\\", ...]\"},{\"objectClass\":\"ReflectionClass\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/di/Container.php\",\"line\":420,\"class\":\"ReflectionClass\",\"method\":\"newInstanceArgs\",\"args\":\"[[\\\"components\\\" => [\\\"config\\\" => craft\\\\services\\\\Config, \\\"api\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Api\\\"], \\\"assets\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Assets\\\"], \\\"assetIndexer\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\AssetIndexer\\\"], ...], \\\"id\\\" => \\\"craft-test\\\", \\\"name\\\" => \\\"Craft CMS\\\", \\\"version\\\" => \\\"3.6.6\\\", ...]]\"},{\"objectClass\":\"yii\\\\di\\\\Container\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/di/Container.php\",\"line\":171,\"class\":\"yii\\\\di\\\\Container\",\"method\":\"build\",\"args\":\"\\\"craft\\\\web\\\\Application\\\", [], [\\\"components\\\" => [\\\"config\\\" => craft\\\\services\\\\Config, \\\"api\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Api\\\"], \\\"assets\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Assets\\\"], \\\"assetIndexer\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\AssetIndexer\\\"], ...], \\\"id\\\" => \\\"craft-test\\\", \\\"name\\\" => \\\"Craft CMS\\\", \\\"version\\\" => \\\"3.6.6\\\", ...]\"},{\"objectClass\":\"yii\\\\di\\\\Container\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/BaseYii.php\",\"line\":365,\"class\":\"yii\\\\di\\\\Container\",\"method\":\"get\",\"args\":\"\\\"craft\\\\web\\\\Application\\\", [], [\\\"components\\\" => [\\\"config\\\" => craft\\\\services\\\\Config, \\\"api\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Api\\\"], \\\"assets\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Assets\\\"], \\\"assetIndexer\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\AssetIndexer\\\"], ...], \\\"id\\\" => \\\"craft-test\\\", \\\"name\\\" => \\\"Craft CMS\\\", \\\"version\\\" => \\\"3.6.6\\\", ...]\"},{\"objectClass\":null,\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/test/TestSetup.php\",\"line\":124,\"class\":\"yii\\\\BaseYii\",\"method\":\"createObject\",\"args\":\"[\\\"components\\\" => [\\\"config\\\" => craft\\\\services\\\\Config, \\\"api\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Api\\\"], \\\"assets\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Assets\\\"], \\\"assetIndexer\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\AssetIndexer\\\"], ...], \\\"id\\\" => \\\"craft-test\\\", \\\"name\\\" => \\\"Craft CMS\\\", \\\"version\\\" => \\\"3.6.6\\\", ...]\"},{\"objectClass\":null,\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/test/Craft.php\",\"line\":121,\"class\":\"craft\\\\test\\\\TestSetup\",\"method\":\"warmCraft\",\"args\":null},{\"objectClass\":\"craft\\\\test\\\\Craft\",\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/src/Codeception/SuiteManager.php\",\"line\":83,\"class\":\"craft\\\\test\\\\Craft\",\"method\":\"_initialize\",\"args\":null},{\"objectClass\":\"Codeception\\\\SuiteManager\",\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/src/Codeception/Codecept.php\",\"line\":204,\"class\":\"Codeception\\\\SuiteManager\",\"method\":\"initialize\",\"args\":null},{\"objectClass\":\"Codeception\\\\Codecept\",\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/src/Codeception/Codecept.php\",\"line\":162,\"class\":\"Codeception\\\\Codecept\",\"method\":\"runSuite\",\"args\":\"[\\\"actor\\\" => \\\"UnitTester\\\", \\\"modules\\\" => [\\\"enabled\\\" => [\\\"\\\\craft\\\\test\\\\Craft\\\", \\\"Asserts\\\", \\\"\\\\Helper\\\\Unit\\\"], \\\"step_decorators\\\" => null, \\\"config\\\" => [\\\"\\\\craft\\\\test\\\\Craft\\\" => [\\\"configFile\\\" => \\\"tests/_craft/config/test.php\\\", \\\"entryUrl\\\" => \\\"http://test.craftcms.test/index.php\\\", \\\"projectConfig\\\" => [], \\\"migrations\\\" => [], ...]], \\\"depends\\\" => []], \\\"colors\\\" => true, \\\"bootstrap\\\" => false, ...], \\\"unit\\\", null\"},{\"objectClass\":\"Codeception\\\\Codecept\",\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/src/Codeception/Command/Run.php\",\"line\":532,\"class\":\"Codeception\\\\Codecept\",\"method\":\"run\",\"args\":\"\\\"unit\\\"\"},{\"objectClass\":\"Codeception\\\\Command\\\\Run\",\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/src/Codeception/Command/Run.php\",\"line\":407,\"class\":\"Codeception\\\\Command\\\\Run\",\"method\":\"runSuites\",\"args\":\"[\\\"unit\\\"], []\"},{\"objectClass\":\"Codeception\\\\Command\\\\Run\",\"file\":\"/var/www/site/commerce3/vendor/symfony/console/Command/Command.php\",\"line\":255,\"class\":\"Codeception\\\\Command\\\\Run\",\"method\":\"execute\",\"args\":\"Symfony\\\\Component\\\\Console\\\\Input\\\\ArgvInput, Symfony\\\\Component\\\\Console\\\\Output\\\\ConsoleOutput\"},{\"objectClass\":\"Codeception\\\\Command\\\\Run\",\"file\":\"/var/www/site/commerce3/vendor/symfony/console/Application.php\",\"line\":1009,\"class\":\"Symfony\\\\Component\\\\Console\\\\Command\\\\Command\",\"method\":\"run\",\"args\":\"Symfony\\\\Component\\\\Console\\\\Input\\\\ArgvInput, Symfony\\\\Component\\\\Console\\\\Output\\\\ConsoleOutput\"},{\"objectClass\":\"Codeception\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/symfony/console/Application.php\",\"line\":273,\"class\":\"Symfony\\\\Component\\\\Console\\\\Application\",\"method\":\"doRunCommand\",\"args\":\"Codeception\\\\Command\\\\Run, Symfony\\\\Component\\\\Console\\\\Input\\\\ArgvInput, Symfony\\\\Component\\\\Console\\\\Output\\\\ConsoleOutput\"},{\"objectClass\":\"Codeception\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/symfony/console/Application.php\",\"line\":149,\"class\":\"Symfony\\\\Component\\\\Console\\\\Application\",\"method\":\"doRun\",\"args\":\"Symfony\\\\Component\\\\Console\\\\Input\\\\ArgvInput, Symfony\\\\Component\\\\Console\\\\Output\\\\ConsoleOutput\"},{\"objectClass\":\"Codeception\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/src/Codeception/Application.php\",\"line\":117,\"class\":\"Symfony\\\\Component\\\\Console\\\\Application\",\"method\":\"run\",\"args\":\"Symfony\\\\Component\\\\Console\\\\Input\\\\ArgvInput, Symfony\\\\Component\\\\Console\\\\Output\\\\ConsoleOutput\"},{\"objectClass\":\"Codeception\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/app.php\",\"line\":46,\"class\":\"Codeception\\\\Application\",\"method\":\"run\",\"args\":null},{\"objectClass\":null,\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/app.php\",\"line\":47,\"class\":null,\"method\":\"{closure}\",\"args\":null},{\"objectClass\":null,\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/codecept\",\"line\":7,\"class\":null,\"method\":\"require\",\"args\":\"\\\"/var/www/site/commerce3/vendor/codeception/codeception/app.php\\\"\"}]', '2021-03-02 15:02:38', '2021-03-02 15:02:38', '839e7dbd-b369-4833-8bc9-762cb28ccc12', 'validation.key', '/var/www/site/commerce3/local/craftcms/cms/src/services/Config.php:168') ON DUPLICATE KEY UPDATE `lastOccurrence`='2021-03-02 15:02:37', `file`='/var/www/site/commerce3/local/craftcms/cms/src/services/Config.php', `line`=168, `message`='The auto-generated validation key stored at `/var/www/site/commerce3/local/pdaleramirez/super-payment-adjuster/tests/_craft/storage/runtime/validation.key` has been deprecated. Copy its value to the `securityKey` config setting in `config/general.php`.', `traces`='[{\"objectClass\":\"craft\\\\services\\\\Deprecator\",\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/services/Config.php\",\"line\":118,\"class\":\"craft\\\\services\\\\Deprecator\",\"method\":\"log\",\"args\":\"\\\"validation.key\\\", \\\"The auto-generated validation key stored at `/var/www/site/comme...\\\"\"},{\"objectClass\":\"craft\\\\services\\\\Config\",\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/services/Config.php\",\"line\":168,\"class\":\"craft\\\\services\\\\Config\",\"method\":\"getConfigSettings\",\"args\":\"\\\"general\\\"\"},{\"objectClass\":\"craft\\\\services\\\\Config\",\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/helpers/App.php\",\"line\":683,\"class\":\"craft\\\\services\\\\Config\",\"method\":\"getGeneral\",\"args\":null},{\"objectClass\":null,\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/config/app.web.php\",\"line\":11,\"class\":\"craft\\\\helpers\\\\App\",\"method\":\"webRequestConfig\",\"args\":null},{\"objectClass\":null,\"file\":null,\"line\":null,\"class\":\"craft\\\\test\\\\TestSetup\",\"method\":\"{closure}\",\"args\":null},{\"objectClass\":null,\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/di/Container.php\",\"line\":631,\"class\":null,\"method\":\"call_user_func_array\",\"args\":\"Closure, []\"},{\"objectClass\":\"yii\\\\di\\\\Container\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/BaseYii.php\",\"line\":349,\"class\":\"yii\\\\di\\\\Container\",\"method\":\"invoke\",\"args\":\"Closure, []\"},{\"objectClass\":null,\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/di/ServiceLocator.php\",\"line\":137,\"class\":\"yii\\\\BaseYii\",\"method\":\"createObject\",\"args\":\"Closure\"},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/base/Module.php\",\"line\":748,\"class\":\"yii\\\\di\\\\ServiceLocator\",\"method\":\"get\",\"args\":\"\\\"request\\\", true\"},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/web/Application.php\",\"line\":324,\"class\":\"yii\\\\base\\\\Module\",\"method\":\"get\",\"args\":\"\\\"request\\\", true\"},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/web/Application.php\",\"line\":161,\"class\":\"craft\\\\web\\\\Application\",\"method\":\"get\",\"args\":\"\\\"request\\\"\"},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/base/ApplicationTrait.php\",\"line\":1409,\"class\":\"yii\\\\web\\\\Application\",\"method\":\"getRequest\",\"args\":null},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/web/Application.php\",\"line\":90,\"class\":\"craft\\\\web\\\\Application\",\"method\":\"_preInit\",\"args\":null},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/base/BaseObject.php\",\"line\":109,\"class\":\"craft\\\\web\\\\Application\",\"method\":\"init\",\"args\":null},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/base/Application.php\",\"line\":212,\"class\":\"yii\\\\base\\\\BaseObject\",\"method\":\"__construct\",\"args\":\"[\\\"components\\\" => [\\\"config\\\" => craft\\\\services\\\\Config, \\\"api\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Api\\\"], \\\"assets\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Assets\\\"], \\\"assetIndexer\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\AssetIndexer\\\"], ...], \\\"id\\\" => \\\"craft-test\\\", \\\"name\\\" => \\\"Craft CMS\\\", \\\"version\\\" => \\\"3.6.6\\\", ...]\"},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":null,\"line\":null,\"class\":\"yii\\\\base\\\\Application\",\"method\":\"__construct\",\"args\":\"[\\\"components\\\" => [\\\"config\\\" => craft\\\\services\\\\Config, \\\"api\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Api\\\"], \\\"assets\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Assets\\\"], \\\"assetIndexer\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\AssetIndexer\\\"], ...], \\\"id\\\" => \\\"craft-test\\\", \\\"name\\\" => \\\"Craft CMS\\\", \\\"version\\\" => \\\"3.6.6\\\", ...]\"},{\"objectClass\":\"ReflectionClass\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/di/Container.php\",\"line\":420,\"class\":\"ReflectionClass\",\"method\":\"newInstanceArgs\",\"args\":\"[[\\\"components\\\" => [\\\"config\\\" => craft\\\\services\\\\Config, \\\"api\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Api\\\"], \\\"assets\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Assets\\\"], \\\"assetIndexer\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\AssetIndexer\\\"], ...], \\\"id\\\" => \\\"craft-test\\\", \\\"name\\\" => \\\"Craft CMS\\\", \\\"version\\\" => \\\"3.6.6\\\", ...]]\"},{\"objectClass\":\"yii\\\\di\\\\Container\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/di/Container.php\",\"line\":171,\"class\":\"yii\\\\di\\\\Container\",\"method\":\"build\",\"args\":\"\\\"craft\\\\web\\\\Application\\\", [], [\\\"components\\\" => [\\\"config\\\" => craft\\\\services\\\\Config, \\\"api\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Api\\\"], \\\"assets\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Assets\\\"], \\\"assetIndexer\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\AssetIndexer\\\"], ...], \\\"id\\\" => \\\"craft-test\\\", \\\"name\\\" => \\\"Craft CMS\\\", \\\"version\\\" => \\\"3.6.6\\\", ...]\"},{\"objectClass\":\"yii\\\\di\\\\Container\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/BaseYii.php\",\"line\":365,\"class\":\"yii\\\\di\\\\Container\",\"method\":\"get\",\"args\":\"\\\"craft\\\\web\\\\Application\\\", [], [\\\"components\\\" => [\\\"config\\\" => craft\\\\services\\\\Config, \\\"api\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Api\\\"], \\\"assets\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Assets\\\"], \\\"assetIndexer\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\AssetIndexer\\\"], ...], \\\"id\\\" => \\\"craft-test\\\", \\\"name\\\" => \\\"Craft CMS\\\", \\\"version\\\" => \\\"3.6.6\\\", ...]\"},{\"objectClass\":null,\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/test/TestSetup.php\",\"line\":124,\"class\":\"yii\\\\BaseYii\",\"method\":\"createObject\",\"args\":\"[\\\"components\\\" => [\\\"config\\\" => craft\\\\services\\\\Config, \\\"api\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Api\\\"], \\\"assets\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Assets\\\"], \\\"assetIndexer\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\AssetIndexer\\\"], ...], \\\"id\\\" => \\\"craft-test\\\", \\\"name\\\" => \\\"Craft CMS\\\", \\\"version\\\" => \\\"3.6.6\\\", ...]\"},{\"objectClass\":null,\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/test/Craft.php\",\"line\":121,\"class\":\"craft\\\\test\\\\TestSetup\",\"method\":\"warmCraft\",\"args\":null},{\"objectClass\":\"craft\\\\test\\\\Craft\",\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/src/Codeception/SuiteManager.php\",\"line\":83,\"class\":\"craft\\\\test\\\\Craft\",\"method\":\"_initialize\",\"args\":null},{\"objectClass\":\"Codeception\\\\SuiteManager\",\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/src/Codeception/Codecept.php\",\"line\":204,\"class\":\"Codeception\\\\SuiteManager\",\"method\":\"initialize\",\"args\":null},{\"objectClass\":\"Codeception\\\\Codecept\",\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/src/Codeception/Codecept.php\",\"line\":162,\"class\":\"Codeception\\\\Codecept\",\"method\":\"runSuite\",\"args\":\"[\\\"actor\\\" => \\\"UnitTester\\\", \\\"modules\\\" => [\\\"enabled\\\" => [\\\"\\\\craft\\\\test\\\\Craft\\\", \\\"Asserts\\\", \\\"\\\\Helper\\\\Unit\\\"], \\\"step_decorators\\\" => null, \\\"config\\\" => [\\\"\\\\craft\\\\test\\\\Craft\\\" => [\\\"configFile\\\" => \\\"tests/_craft/config/test.php\\\", \\\"entryUrl\\\" => \\\"http://test.craftcms.test/index.php\\\", \\\"projectConfig\\\" => [], \\\"migrations\\\" => [], ...]], \\\"depends\\\" => []], \\\"colors\\\" => true, \\\"bootstrap\\\" => false, ...], \\\"unit\\\", null\"},{\"objectClass\":\"Codeception\\\\Codecept\",\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/src/Codeception/Command/Run.php\",\"line\":532,\"class\":\"Codeception\\\\Codecept\",\"method\":\"run\",\"args\":\"\\\"unit\\\"\"},{\"objectClass\":\"Codeception\\\\Command\\\\Run\",\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/src/Codeception/Command/Run.php\",\"line\":407,\"class\":\"Codeception\\\\Command\\\\Run\",\"method\":\"runSuites\",\"args\":\"[\\\"unit\\\"], []\"},{\"objectClass\":\"Codeception\\\\Command\\\\Run\",\"file\":\"/var/www/site/commerce3/vendor/symfony/console/Command/Command.php\",\"line\":255,\"class\":\"Codeception\\\\Command\\\\Run\",\"method\":\"execute\",\"args\":\"Symfony\\\\Component\\\\Console\\\\Input\\\\ArgvInput, Symfony\\\\Component\\\\Console\\\\Output\\\\ConsoleOutput\"},{\"objectClass\":\"Codeception\\\\Command\\\\Run\",\"file\":\"/var/www/site/commerce3/vendor/symfony/console/Application.php\",\"line\":1009,\"class\":\"Symfony\\\\Component\\\\Console\\\\Command\\\\Command\",\"method\":\"run\",\"args\":\"Symfony\\\\Component\\\\Console\\\\Input\\\\ArgvInput, Symfony\\\\Component\\\\Console\\\\Output\\\\ConsoleOutput\"},{\"objectClass\":\"Codeception\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/symfony/console/Application.php\",\"line\":273,\"class\":\"Symfony\\\\Component\\\\Console\\\\Application\",\"method\":\"doRunCommand\",\"args\":\"Codeception\\\\Command\\\\Run, Symfony\\\\Component\\\\Console\\\\Input\\\\ArgvInput, Symfony\\\\Component\\\\Console\\\\Output\\\\ConsoleOutput\"},{\"objectClass\":\"Codeception\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/symfony/console/Application.php\",\"line\":149,\"class\":\"Symfony\\\\Component\\\\Console\\\\Application\",\"method\":\"doRun\",\"args\":\"Symfony\\\\Component\\\\Console\\\\Input\\\\ArgvInput, Symfony\\\\Component\\\\Console\\\\Output\\\\ConsoleOutput\"},{\"objectClass\":\"Codeception\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/src/Codeception/Application.php\",\"line\":117,\"class\":\"Symfony\\\\Component\\\\Console\\\\Application\",\"method\":\"run\",\"args\":\"Symfony\\\\Component\\\\Console\\\\Input\\\\ArgvInput, Symfony\\\\Component\\\\Console\\\\Output\\\\ConsoleOutput\"},{\"objectClass\":\"Codeception\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/app.php\",\"line\":46,\"class\":\"Codeception\\\\Application\",\"method\":\"run\",\"args\":null},{\"objectClass\":null,\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/app.php\",\"line\":47,\"class\":null,\"method\":\"{closure}\",\"args\":null},{\"objectClass\":null,\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/codecept\",\"line\":7,\"class\":null,\"method\":\"require\",\"args\":\"\\\"/var/www/site/commerce3/vendor/codeception/codeception/app.php\\\"\"}]', `dateCreated`='2021-03-02 15:02:38', `dateUpdated`='2021-03-02 15:02:38', `uid`='839e7dbd-b369-4833-8bc9-762cb28ccc12'
+2021-03-02 07:02:38 [profile begin][yii\db\Command::execute] INSERT INTO `deprecationerrors` (`lastOccurrence`, `file`, `line`, `message`, `traces`, `dateCreated`, `dateUpdated`, `uid`, `key`, `fingerprint`) VALUES ('2021-03-02 15:02:37', '/var/www/site/commerce3/local/craftcms/cms/src/services/Config.php', 168, 'The auto-generated validation key stored at `/var/www/site/commerce3/local/pdaleramirez/super-payment-adjuster/tests/_craft/storage/runtime/validation.key` has been deprecated. Copy its value to the `securityKey` config setting in `config/general.php`.', '[{\"objectClass\":\"craft\\\\services\\\\Deprecator\",\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/services/Config.php\",\"line\":118,\"class\":\"craft\\\\services\\\\Deprecator\",\"method\":\"log\",\"args\":\"\\\"validation.key\\\", \\\"The auto-generated validation key stored at `/var/www/site/comme...\\\"\"},{\"objectClass\":\"craft\\\\services\\\\Config\",\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/services/Config.php\",\"line\":168,\"class\":\"craft\\\\services\\\\Config\",\"method\":\"getConfigSettings\",\"args\":\"\\\"general\\\"\"},{\"objectClass\":\"craft\\\\services\\\\Config\",\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/helpers/App.php\",\"line\":683,\"class\":\"craft\\\\services\\\\Config\",\"method\":\"getGeneral\",\"args\":null},{\"objectClass\":null,\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/config/app.web.php\",\"line\":11,\"class\":\"craft\\\\helpers\\\\App\",\"method\":\"webRequestConfig\",\"args\":null},{\"objectClass\":null,\"file\":null,\"line\":null,\"class\":\"craft\\\\test\\\\TestSetup\",\"method\":\"{closure}\",\"args\":null},{\"objectClass\":null,\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/di/Container.php\",\"line\":631,\"class\":null,\"method\":\"call_user_func_array\",\"args\":\"Closure, []\"},{\"objectClass\":\"yii\\\\di\\\\Container\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/BaseYii.php\",\"line\":349,\"class\":\"yii\\\\di\\\\Container\",\"method\":\"invoke\",\"args\":\"Closure, []\"},{\"objectClass\":null,\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/di/ServiceLocator.php\",\"line\":137,\"class\":\"yii\\\\BaseYii\",\"method\":\"createObject\",\"args\":\"Closure\"},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/base/Module.php\",\"line\":748,\"class\":\"yii\\\\di\\\\ServiceLocator\",\"method\":\"get\",\"args\":\"\\\"request\\\", true\"},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/web/Application.php\",\"line\":324,\"class\":\"yii\\\\base\\\\Module\",\"method\":\"get\",\"args\":\"\\\"request\\\", true\"},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/web/Application.php\",\"line\":161,\"class\":\"craft\\\\web\\\\Application\",\"method\":\"get\",\"args\":\"\\\"request\\\"\"},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/base/ApplicationTrait.php\",\"line\":1409,\"class\":\"yii\\\\web\\\\Application\",\"method\":\"getRequest\",\"args\":null},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/web/Application.php\",\"line\":90,\"class\":\"craft\\\\web\\\\Application\",\"method\":\"_preInit\",\"args\":null},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/base/BaseObject.php\",\"line\":109,\"class\":\"craft\\\\web\\\\Application\",\"method\":\"init\",\"args\":null},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/base/Application.php\",\"line\":212,\"class\":\"yii\\\\base\\\\BaseObject\",\"method\":\"__construct\",\"args\":\"[\\\"components\\\" => [\\\"config\\\" => craft\\\\services\\\\Config, \\\"api\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Api\\\"], \\\"assets\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Assets\\\"], \\\"assetIndexer\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\AssetIndexer\\\"], ...], \\\"id\\\" => \\\"craft-test\\\", \\\"name\\\" => \\\"Craft CMS\\\", \\\"version\\\" => \\\"3.6.6\\\", ...]\"},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":null,\"line\":null,\"class\":\"yii\\\\base\\\\Application\",\"method\":\"__construct\",\"args\":\"[\\\"components\\\" => [\\\"config\\\" => craft\\\\services\\\\Config, \\\"api\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Api\\\"], \\\"assets\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Assets\\\"], \\\"assetIndexer\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\AssetIndexer\\\"], ...], \\\"id\\\" => \\\"craft-test\\\", \\\"name\\\" => \\\"Craft CMS\\\", \\\"version\\\" => \\\"3.6.6\\\", ...]\"},{\"objectClass\":\"ReflectionClass\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/di/Container.php\",\"line\":420,\"class\":\"ReflectionClass\",\"method\":\"newInstanceArgs\",\"args\":\"[[\\\"components\\\" => [\\\"config\\\" => craft\\\\services\\\\Config, \\\"api\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Api\\\"], \\\"assets\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Assets\\\"], \\\"assetIndexer\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\AssetIndexer\\\"], ...], \\\"id\\\" => \\\"craft-test\\\", \\\"name\\\" => \\\"Craft CMS\\\", \\\"version\\\" => \\\"3.6.6\\\", ...]]\"},{\"objectClass\":\"yii\\\\di\\\\Container\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/di/Container.php\",\"line\":171,\"class\":\"yii\\\\di\\\\Container\",\"method\":\"build\",\"args\":\"\\\"craft\\\\web\\\\Application\\\", [], [\\\"components\\\" => [\\\"config\\\" => craft\\\\services\\\\Config, \\\"api\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Api\\\"], \\\"assets\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Assets\\\"], \\\"assetIndexer\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\AssetIndexer\\\"], ...], \\\"id\\\" => \\\"craft-test\\\", \\\"name\\\" => \\\"Craft CMS\\\", \\\"version\\\" => \\\"3.6.6\\\", ...]\"},{\"objectClass\":\"yii\\\\di\\\\Container\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/BaseYii.php\",\"line\":365,\"class\":\"yii\\\\di\\\\Container\",\"method\":\"get\",\"args\":\"\\\"craft\\\\web\\\\Application\\\", [], [\\\"components\\\" => [\\\"config\\\" => craft\\\\services\\\\Config, \\\"api\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Api\\\"], \\\"assets\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Assets\\\"], \\\"assetIndexer\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\AssetIndexer\\\"], ...], \\\"id\\\" => \\\"craft-test\\\", \\\"name\\\" => \\\"Craft CMS\\\", \\\"version\\\" => \\\"3.6.6\\\", ...]\"},{\"objectClass\":null,\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/test/TestSetup.php\",\"line\":124,\"class\":\"yii\\\\BaseYii\",\"method\":\"createObject\",\"args\":\"[\\\"components\\\" => [\\\"config\\\" => craft\\\\services\\\\Config, \\\"api\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Api\\\"], \\\"assets\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Assets\\\"], \\\"assetIndexer\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\AssetIndexer\\\"], ...], \\\"id\\\" => \\\"craft-test\\\", \\\"name\\\" => \\\"Craft CMS\\\", \\\"version\\\" => \\\"3.6.6\\\", ...]\"},{\"objectClass\":null,\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/test/Craft.php\",\"line\":121,\"class\":\"craft\\\\test\\\\TestSetup\",\"method\":\"warmCraft\",\"args\":null},{\"objectClass\":\"craft\\\\test\\\\Craft\",\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/src/Codeception/SuiteManager.php\",\"line\":83,\"class\":\"craft\\\\test\\\\Craft\",\"method\":\"_initialize\",\"args\":null},{\"objectClass\":\"Codeception\\\\SuiteManager\",\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/src/Codeception/Codecept.php\",\"line\":204,\"class\":\"Codeception\\\\SuiteManager\",\"method\":\"initialize\",\"args\":null},{\"objectClass\":\"Codeception\\\\Codecept\",\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/src/Codeception/Codecept.php\",\"line\":162,\"class\":\"Codeception\\\\Codecept\",\"method\":\"runSuite\",\"args\":\"[\\\"actor\\\" => \\\"UnitTester\\\", \\\"modules\\\" => [\\\"enabled\\\" => [\\\"\\\\craft\\\\test\\\\Craft\\\", \\\"Asserts\\\", \\\"\\\\Helper\\\\Unit\\\"], \\\"step_decorators\\\" => null, \\\"config\\\" => [\\\"\\\\craft\\\\test\\\\Craft\\\" => [\\\"configFile\\\" => \\\"tests/_craft/config/test.php\\\", \\\"entryUrl\\\" => \\\"http://test.craftcms.test/index.php\\\", \\\"projectConfig\\\" => [], \\\"migrations\\\" => [], ...]], \\\"depends\\\" => []], \\\"colors\\\" => true, \\\"bootstrap\\\" => false, ...], \\\"unit\\\", null\"},{\"objectClass\":\"Codeception\\\\Codecept\",\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/src/Codeception/Command/Run.php\",\"line\":532,\"class\":\"Codeception\\\\Codecept\",\"method\":\"run\",\"args\":\"\\\"unit\\\"\"},{\"objectClass\":\"Codeception\\\\Command\\\\Run\",\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/src/Codeception/Command/Run.php\",\"line\":407,\"class\":\"Codeception\\\\Command\\\\Run\",\"method\":\"runSuites\",\"args\":\"[\\\"unit\\\"], []\"},{\"objectClass\":\"Codeception\\\\Command\\\\Run\",\"file\":\"/var/www/site/commerce3/vendor/symfony/console/Command/Command.php\",\"line\":255,\"class\":\"Codeception\\\\Command\\\\Run\",\"method\":\"execute\",\"args\":\"Symfony\\\\Component\\\\Console\\\\Input\\\\ArgvInput, Symfony\\\\Component\\\\Console\\\\Output\\\\ConsoleOutput\"},{\"objectClass\":\"Codeception\\\\Command\\\\Run\",\"file\":\"/var/www/site/commerce3/vendor/symfony/console/Application.php\",\"line\":1009,\"class\":\"Symfony\\\\Component\\\\Console\\\\Command\\\\Command\",\"method\":\"run\",\"args\":\"Symfony\\\\Component\\\\Console\\\\Input\\\\ArgvInput, Symfony\\\\Component\\\\Console\\\\Output\\\\ConsoleOutput\"},{\"objectClass\":\"Codeception\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/symfony/console/Application.php\",\"line\":273,\"class\":\"Symfony\\\\Component\\\\Console\\\\Application\",\"method\":\"doRunCommand\",\"args\":\"Codeception\\\\Command\\\\Run, Symfony\\\\Component\\\\Console\\\\Input\\\\ArgvInput, Symfony\\\\Component\\\\Console\\\\Output\\\\ConsoleOutput\"},{\"objectClass\":\"Codeception\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/symfony/console/Application.php\",\"line\":149,\"class\":\"Symfony\\\\Component\\\\Console\\\\Application\",\"method\":\"doRun\",\"args\":\"Symfony\\\\Component\\\\Console\\\\Input\\\\ArgvInput, Symfony\\\\Component\\\\Console\\\\Output\\\\ConsoleOutput\"},{\"objectClass\":\"Codeception\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/src/Codeception/Application.php\",\"line\":117,\"class\":\"Symfony\\\\Component\\\\Console\\\\Application\",\"method\":\"run\",\"args\":\"Symfony\\\\Component\\\\Console\\\\Input\\\\ArgvInput, Symfony\\\\Component\\\\Console\\\\Output\\\\ConsoleOutput\"},{\"objectClass\":\"Codeception\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/app.php\",\"line\":46,\"class\":\"Codeception\\\\Application\",\"method\":\"run\",\"args\":null},{\"objectClass\":null,\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/app.php\",\"line\":47,\"class\":null,\"method\":\"{closure}\",\"args\":null},{\"objectClass\":null,\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/codecept\",\"line\":7,\"class\":null,\"method\":\"require\",\"args\":\"\\\"/var/www/site/commerce3/vendor/codeception/codeception/app.php\\\"\"}]', '2021-03-02 15:02:38', '2021-03-02 15:02:38', '839e7dbd-b369-4833-8bc9-762cb28ccc12', 'validation.key', '/var/www/site/commerce3/local/craftcms/cms/src/services/Config.php:168') ON DUPLICATE KEY UPDATE `lastOccurrence`='2021-03-02 15:02:37', `file`='/var/www/site/commerce3/local/craftcms/cms/src/services/Config.php', `line`=168, `message`='The auto-generated validation key stored at `/var/www/site/commerce3/local/pdaleramirez/super-payment-adjuster/tests/_craft/storage/runtime/validation.key` has been deprecated. Copy its value to the `securityKey` config setting in `config/general.php`.', `traces`='[{\"objectClass\":\"craft\\\\services\\\\Deprecator\",\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/services/Config.php\",\"line\":118,\"class\":\"craft\\\\services\\\\Deprecator\",\"method\":\"log\",\"args\":\"\\\"validation.key\\\", \\\"The auto-generated validation key stored at `/var/www/site/comme...\\\"\"},{\"objectClass\":\"craft\\\\services\\\\Config\",\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/services/Config.php\",\"line\":168,\"class\":\"craft\\\\services\\\\Config\",\"method\":\"getConfigSettings\",\"args\":\"\\\"general\\\"\"},{\"objectClass\":\"craft\\\\services\\\\Config\",\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/helpers/App.php\",\"line\":683,\"class\":\"craft\\\\services\\\\Config\",\"method\":\"getGeneral\",\"args\":null},{\"objectClass\":null,\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/config/app.web.php\",\"line\":11,\"class\":\"craft\\\\helpers\\\\App\",\"method\":\"webRequestConfig\",\"args\":null},{\"objectClass\":null,\"file\":null,\"line\":null,\"class\":\"craft\\\\test\\\\TestSetup\",\"method\":\"{closure}\",\"args\":null},{\"objectClass\":null,\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/di/Container.php\",\"line\":631,\"class\":null,\"method\":\"call_user_func_array\",\"args\":\"Closure, []\"},{\"objectClass\":\"yii\\\\di\\\\Container\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/BaseYii.php\",\"line\":349,\"class\":\"yii\\\\di\\\\Container\",\"method\":\"invoke\",\"args\":\"Closure, []\"},{\"objectClass\":null,\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/di/ServiceLocator.php\",\"line\":137,\"class\":\"yii\\\\BaseYii\",\"method\":\"createObject\",\"args\":\"Closure\"},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/base/Module.php\",\"line\":748,\"class\":\"yii\\\\di\\\\ServiceLocator\",\"method\":\"get\",\"args\":\"\\\"request\\\", true\"},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/web/Application.php\",\"line\":324,\"class\":\"yii\\\\base\\\\Module\",\"method\":\"get\",\"args\":\"\\\"request\\\", true\"},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/web/Application.php\",\"line\":161,\"class\":\"craft\\\\web\\\\Application\",\"method\":\"get\",\"args\":\"\\\"request\\\"\"},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/base/ApplicationTrait.php\",\"line\":1409,\"class\":\"yii\\\\web\\\\Application\",\"method\":\"getRequest\",\"args\":null},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/web/Application.php\",\"line\":90,\"class\":\"craft\\\\web\\\\Application\",\"method\":\"_preInit\",\"args\":null},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/base/BaseObject.php\",\"line\":109,\"class\":\"craft\\\\web\\\\Application\",\"method\":\"init\",\"args\":null},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/base/Application.php\",\"line\":212,\"class\":\"yii\\\\base\\\\BaseObject\",\"method\":\"__construct\",\"args\":\"[\\\"components\\\" => [\\\"config\\\" => craft\\\\services\\\\Config, \\\"api\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Api\\\"], \\\"assets\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Assets\\\"], \\\"assetIndexer\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\AssetIndexer\\\"], ...], \\\"id\\\" => \\\"craft-test\\\", \\\"name\\\" => \\\"Craft CMS\\\", \\\"version\\\" => \\\"3.6.6\\\", ...]\"},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":null,\"line\":null,\"class\":\"yii\\\\base\\\\Application\",\"method\":\"__construct\",\"args\":\"[\\\"components\\\" => [\\\"config\\\" => craft\\\\services\\\\Config, \\\"api\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Api\\\"], \\\"assets\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Assets\\\"], \\\"assetIndexer\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\AssetIndexer\\\"], ...], \\\"id\\\" => \\\"craft-test\\\", \\\"name\\\" => \\\"Craft CMS\\\", \\\"version\\\" => \\\"3.6.6\\\", ...]\"},{\"objectClass\":\"ReflectionClass\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/di/Container.php\",\"line\":420,\"class\":\"ReflectionClass\",\"method\":\"newInstanceArgs\",\"args\":\"[[\\\"components\\\" => [\\\"config\\\" => craft\\\\services\\\\Config, \\\"api\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Api\\\"], \\\"assets\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Assets\\\"], \\\"assetIndexer\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\AssetIndexer\\\"], ...], \\\"id\\\" => \\\"craft-test\\\", \\\"name\\\" => \\\"Craft CMS\\\", \\\"version\\\" => \\\"3.6.6\\\", ...]]\"},{\"objectClass\":\"yii\\\\di\\\\Container\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/di/Container.php\",\"line\":171,\"class\":\"yii\\\\di\\\\Container\",\"method\":\"build\",\"args\":\"\\\"craft\\\\web\\\\Application\\\", [], [\\\"components\\\" => [\\\"config\\\" => craft\\\\services\\\\Config, \\\"api\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Api\\\"], \\\"assets\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Assets\\\"], \\\"assetIndexer\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\AssetIndexer\\\"], ...], \\\"id\\\" => \\\"craft-test\\\", \\\"name\\\" => \\\"Craft CMS\\\", \\\"version\\\" => \\\"3.6.6\\\", ...]\"},{\"objectClass\":\"yii\\\\di\\\\Container\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/BaseYii.php\",\"line\":365,\"class\":\"yii\\\\di\\\\Container\",\"method\":\"get\",\"args\":\"\\\"craft\\\\web\\\\Application\\\", [], [\\\"components\\\" => [\\\"config\\\" => craft\\\\services\\\\Config, \\\"api\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Api\\\"], \\\"assets\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Assets\\\"], \\\"assetIndexer\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\AssetIndexer\\\"], ...], \\\"id\\\" => \\\"craft-test\\\", \\\"name\\\" => \\\"Craft CMS\\\", \\\"version\\\" => \\\"3.6.6\\\", ...]\"},{\"objectClass\":null,\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/test/TestSetup.php\",\"line\":124,\"class\":\"yii\\\\BaseYii\",\"method\":\"createObject\",\"args\":\"[\\\"components\\\" => [\\\"config\\\" => craft\\\\services\\\\Config, \\\"api\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Api\\\"], \\\"assets\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Assets\\\"], \\\"assetIndexer\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\AssetIndexer\\\"], ...], \\\"id\\\" => \\\"craft-test\\\", \\\"name\\\" => \\\"Craft CMS\\\", \\\"version\\\" => \\\"3.6.6\\\", ...]\"},{\"objectClass\":null,\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/test/Craft.php\",\"line\":121,\"class\":\"craft\\\\test\\\\TestSetup\",\"method\":\"warmCraft\",\"args\":null},{\"objectClass\":\"craft\\\\test\\\\Craft\",\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/src/Codeception/SuiteManager.php\",\"line\":83,\"class\":\"craft\\\\test\\\\Craft\",\"method\":\"_initialize\",\"args\":null},{\"objectClass\":\"Codeception\\\\SuiteManager\",\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/src/Codeception/Codecept.php\",\"line\":204,\"class\":\"Codeception\\\\SuiteManager\",\"method\":\"initialize\",\"args\":null},{\"objectClass\":\"Codeception\\\\Codecept\",\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/src/Codeception/Codecept.php\",\"line\":162,\"class\":\"Codeception\\\\Codecept\",\"method\":\"runSuite\",\"args\":\"[\\\"actor\\\" => \\\"UnitTester\\\", \\\"modules\\\" => [\\\"enabled\\\" => [\\\"\\\\craft\\\\test\\\\Craft\\\", \\\"Asserts\\\", \\\"\\\\Helper\\\\Unit\\\"], \\\"step_decorators\\\" => null, \\\"config\\\" => [\\\"\\\\craft\\\\test\\\\Craft\\\" => [\\\"configFile\\\" => \\\"tests/_craft/config/test.php\\\", \\\"entryUrl\\\" => \\\"http://test.craftcms.test/index.php\\\", \\\"projectConfig\\\" => [], \\\"migrations\\\" => [], ...]], \\\"depends\\\" => []], \\\"colors\\\" => true, \\\"bootstrap\\\" => false, ...], \\\"unit\\\", null\"},{\"objectClass\":\"Codeception\\\\Codecept\",\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/src/Codeception/Command/Run.php\",\"line\":532,\"class\":\"Codeception\\\\Codecept\",\"method\":\"run\",\"args\":\"\\\"unit\\\"\"},{\"objectClass\":\"Codeception\\\\Command\\\\Run\",\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/src/Codeception/Command/Run.php\",\"line\":407,\"class\":\"Codeception\\\\Command\\\\Run\",\"method\":\"runSuites\",\"args\":\"[\\\"unit\\\"], []\"},{\"objectClass\":\"Codeception\\\\Command\\\\Run\",\"file\":\"/var/www/site/commerce3/vendor/symfony/console/Command/Command.php\",\"line\":255,\"class\":\"Codeception\\\\Command\\\\Run\",\"method\":\"execute\",\"args\":\"Symfony\\\\Component\\\\Console\\\\Input\\\\ArgvInput, Symfony\\\\Component\\\\Console\\\\Output\\\\ConsoleOutput\"},{\"objectClass\":\"Codeception\\\\Command\\\\Run\",\"file\":\"/var/www/site/commerce3/vendor/symfony/console/Application.php\",\"line\":1009,\"class\":\"Symfony\\\\Component\\\\Console\\\\Command\\\\Command\",\"method\":\"run\",\"args\":\"Symfony\\\\Component\\\\Console\\\\Input\\\\ArgvInput, Symfony\\\\Component\\\\Console\\\\Output\\\\ConsoleOutput\"},{\"objectClass\":\"Codeception\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/symfony/console/Application.php\",\"line\":273,\"class\":\"Symfony\\\\Component\\\\Console\\\\Application\",\"method\":\"doRunCommand\",\"args\":\"Codeception\\\\Command\\\\Run, Symfony\\\\Component\\\\Console\\\\Input\\\\ArgvInput, Symfony\\\\Component\\\\Console\\\\Output\\\\ConsoleOutput\"},{\"objectClass\":\"Codeception\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/symfony/console/Application.php\",\"line\":149,\"class\":\"Symfony\\\\Component\\\\Console\\\\Application\",\"method\":\"doRun\",\"args\":\"Symfony\\\\Component\\\\Console\\\\Input\\\\ArgvInput, Symfony\\\\Component\\\\Console\\\\Output\\\\ConsoleOutput\"},{\"objectClass\":\"Codeception\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/src/Codeception/Application.php\",\"line\":117,\"class\":\"Symfony\\\\Component\\\\Console\\\\Application\",\"method\":\"run\",\"args\":\"Symfony\\\\Component\\\\Console\\\\Input\\\\ArgvInput, Symfony\\\\Component\\\\Console\\\\Output\\\\ConsoleOutput\"},{\"objectClass\":\"Codeception\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/app.php\",\"line\":46,\"class\":\"Codeception\\\\Application\",\"method\":\"run\",\"args\":null},{\"objectClass\":null,\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/app.php\",\"line\":47,\"class\":null,\"method\":\"{closure}\",\"args\":null},{\"objectClass\":null,\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/codecept\",\"line\":7,\"class\":null,\"method\":\"require\",\"args\":\"\\\"/var/www/site/commerce3/vendor/codeception/codeception/app.php\\\"\"}]', `dateCreated`='2021-03-02 15:02:38', `dateUpdated`='2021-03-02 15:02:38', `uid`='839e7dbd-b369-4833-8bc9-762cb28ccc12'
+2021-03-02 07:02:38 [profile end][yii\db\Command::execute] INSERT INTO `deprecationerrors` (`lastOccurrence`, `file`, `line`, `message`, `traces`, `dateCreated`, `dateUpdated`, `uid`, `key`, `fingerprint`) VALUES ('2021-03-02 15:02:37', '/var/www/site/commerce3/local/craftcms/cms/src/services/Config.php', 168, 'The auto-generated validation key stored at `/var/www/site/commerce3/local/pdaleramirez/super-payment-adjuster/tests/_craft/storage/runtime/validation.key` has been deprecated. Copy its value to the `securityKey` config setting in `config/general.php`.', '[{\"objectClass\":\"craft\\\\services\\\\Deprecator\",\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/services/Config.php\",\"line\":118,\"class\":\"craft\\\\services\\\\Deprecator\",\"method\":\"log\",\"args\":\"\\\"validation.key\\\", \\\"The auto-generated validation key stored at `/var/www/site/comme...\\\"\"},{\"objectClass\":\"craft\\\\services\\\\Config\",\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/services/Config.php\",\"line\":168,\"class\":\"craft\\\\services\\\\Config\",\"method\":\"getConfigSettings\",\"args\":\"\\\"general\\\"\"},{\"objectClass\":\"craft\\\\services\\\\Config\",\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/helpers/App.php\",\"line\":683,\"class\":\"craft\\\\services\\\\Config\",\"method\":\"getGeneral\",\"args\":null},{\"objectClass\":null,\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/config/app.web.php\",\"line\":11,\"class\":\"craft\\\\helpers\\\\App\",\"method\":\"webRequestConfig\",\"args\":null},{\"objectClass\":null,\"file\":null,\"line\":null,\"class\":\"craft\\\\test\\\\TestSetup\",\"method\":\"{closure}\",\"args\":null},{\"objectClass\":null,\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/di/Container.php\",\"line\":631,\"class\":null,\"method\":\"call_user_func_array\",\"args\":\"Closure, []\"},{\"objectClass\":\"yii\\\\di\\\\Container\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/BaseYii.php\",\"line\":349,\"class\":\"yii\\\\di\\\\Container\",\"method\":\"invoke\",\"args\":\"Closure, []\"},{\"objectClass\":null,\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/di/ServiceLocator.php\",\"line\":137,\"class\":\"yii\\\\BaseYii\",\"method\":\"createObject\",\"args\":\"Closure\"},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/base/Module.php\",\"line\":748,\"class\":\"yii\\\\di\\\\ServiceLocator\",\"method\":\"get\",\"args\":\"\\\"request\\\", true\"},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/web/Application.php\",\"line\":324,\"class\":\"yii\\\\base\\\\Module\",\"method\":\"get\",\"args\":\"\\\"request\\\", true\"},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/web/Application.php\",\"line\":161,\"class\":\"craft\\\\web\\\\Application\",\"method\":\"get\",\"args\":\"\\\"request\\\"\"},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/base/ApplicationTrait.php\",\"line\":1409,\"class\":\"yii\\\\web\\\\Application\",\"method\":\"getRequest\",\"args\":null},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/web/Application.php\",\"line\":90,\"class\":\"craft\\\\web\\\\Application\",\"method\":\"_preInit\",\"args\":null},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/base/BaseObject.php\",\"line\":109,\"class\":\"craft\\\\web\\\\Application\",\"method\":\"init\",\"args\":null},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/base/Application.php\",\"line\":212,\"class\":\"yii\\\\base\\\\BaseObject\",\"method\":\"__construct\",\"args\":\"[\\\"components\\\" => [\\\"config\\\" => craft\\\\services\\\\Config, \\\"api\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Api\\\"], \\\"assets\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Assets\\\"], \\\"assetIndexer\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\AssetIndexer\\\"], ...], \\\"id\\\" => \\\"craft-test\\\", \\\"name\\\" => \\\"Craft CMS\\\", \\\"version\\\" => \\\"3.6.6\\\", ...]\"},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":null,\"line\":null,\"class\":\"yii\\\\base\\\\Application\",\"method\":\"__construct\",\"args\":\"[\\\"components\\\" => [\\\"config\\\" => craft\\\\services\\\\Config, \\\"api\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Api\\\"], \\\"assets\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Assets\\\"], \\\"assetIndexer\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\AssetIndexer\\\"], ...], \\\"id\\\" => \\\"craft-test\\\", \\\"name\\\" => \\\"Craft CMS\\\", \\\"version\\\" => \\\"3.6.6\\\", ...]\"},{\"objectClass\":\"ReflectionClass\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/di/Container.php\",\"line\":420,\"class\":\"ReflectionClass\",\"method\":\"newInstanceArgs\",\"args\":\"[[\\\"components\\\" => [\\\"config\\\" => craft\\\\services\\\\Config, \\\"api\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Api\\\"], \\\"assets\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Assets\\\"], \\\"assetIndexer\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\AssetIndexer\\\"], ...], \\\"id\\\" => \\\"craft-test\\\", \\\"name\\\" => \\\"Craft CMS\\\", \\\"version\\\" => \\\"3.6.6\\\", ...]]\"},{\"objectClass\":\"yii\\\\di\\\\Container\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/di/Container.php\",\"line\":171,\"class\":\"yii\\\\di\\\\Container\",\"method\":\"build\",\"args\":\"\\\"craft\\\\web\\\\Application\\\", [], [\\\"components\\\" => [\\\"config\\\" => craft\\\\services\\\\Config, \\\"api\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Api\\\"], \\\"assets\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Assets\\\"], \\\"assetIndexer\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\AssetIndexer\\\"], ...], \\\"id\\\" => \\\"craft-test\\\", \\\"name\\\" => \\\"Craft CMS\\\", \\\"version\\\" => \\\"3.6.6\\\", ...]\"},{\"objectClass\":\"yii\\\\di\\\\Container\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/BaseYii.php\",\"line\":365,\"class\":\"yii\\\\di\\\\Container\",\"method\":\"get\",\"args\":\"\\\"craft\\\\web\\\\Application\\\", [], [\\\"components\\\" => [\\\"config\\\" => craft\\\\services\\\\Config, \\\"api\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Api\\\"], \\\"assets\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Assets\\\"], \\\"assetIndexer\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\AssetIndexer\\\"], ...], \\\"id\\\" => \\\"craft-test\\\", \\\"name\\\" => \\\"Craft CMS\\\", \\\"version\\\" => \\\"3.6.6\\\", ...]\"},{\"objectClass\":null,\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/test/TestSetup.php\",\"line\":124,\"class\":\"yii\\\\BaseYii\",\"method\":\"createObject\",\"args\":\"[\\\"components\\\" => [\\\"config\\\" => craft\\\\services\\\\Config, \\\"api\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Api\\\"], \\\"assets\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Assets\\\"], \\\"assetIndexer\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\AssetIndexer\\\"], ...], \\\"id\\\" => \\\"craft-test\\\", \\\"name\\\" => \\\"Craft CMS\\\", \\\"version\\\" => \\\"3.6.6\\\", ...]\"},{\"objectClass\":null,\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/test/Craft.php\",\"line\":121,\"class\":\"craft\\\\test\\\\TestSetup\",\"method\":\"warmCraft\",\"args\":null},{\"objectClass\":\"craft\\\\test\\\\Craft\",\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/src/Codeception/SuiteManager.php\",\"line\":83,\"class\":\"craft\\\\test\\\\Craft\",\"method\":\"_initialize\",\"args\":null},{\"objectClass\":\"Codeception\\\\SuiteManager\",\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/src/Codeception/Codecept.php\",\"line\":204,\"class\":\"Codeception\\\\SuiteManager\",\"method\":\"initialize\",\"args\":null},{\"objectClass\":\"Codeception\\\\Codecept\",\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/src/Codeception/Codecept.php\",\"line\":162,\"class\":\"Codeception\\\\Codecept\",\"method\":\"runSuite\",\"args\":\"[\\\"actor\\\" => \\\"UnitTester\\\", \\\"modules\\\" => [\\\"enabled\\\" => [\\\"\\\\craft\\\\test\\\\Craft\\\", \\\"Asserts\\\", \\\"\\\\Helper\\\\Unit\\\"], \\\"step_decorators\\\" => null, \\\"config\\\" => [\\\"\\\\craft\\\\test\\\\Craft\\\" => [\\\"configFile\\\" => \\\"tests/_craft/config/test.php\\\", \\\"entryUrl\\\" => \\\"http://test.craftcms.test/index.php\\\", \\\"projectConfig\\\" => [], \\\"migrations\\\" => [], ...]], \\\"depends\\\" => []], \\\"colors\\\" => true, \\\"bootstrap\\\" => false, ...], \\\"unit\\\", null\"},{\"objectClass\":\"Codeception\\\\Codecept\",\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/src/Codeception/Command/Run.php\",\"line\":532,\"class\":\"Codeception\\\\Codecept\",\"method\":\"run\",\"args\":\"\\\"unit\\\"\"},{\"objectClass\":\"Codeception\\\\Command\\\\Run\",\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/src/Codeception/Command/Run.php\",\"line\":407,\"class\":\"Codeception\\\\Command\\\\Run\",\"method\":\"runSuites\",\"args\":\"[\\\"unit\\\"], []\"},{\"objectClass\":\"Codeception\\\\Command\\\\Run\",\"file\":\"/var/www/site/commerce3/vendor/symfony/console/Command/Command.php\",\"line\":255,\"class\":\"Codeception\\\\Command\\\\Run\",\"method\":\"execute\",\"args\":\"Symfony\\\\Component\\\\Console\\\\Input\\\\ArgvInput, Symfony\\\\Component\\\\Console\\\\Output\\\\ConsoleOutput\"},{\"objectClass\":\"Codeception\\\\Command\\\\Run\",\"file\":\"/var/www/site/commerce3/vendor/symfony/console/Application.php\",\"line\":1009,\"class\":\"Symfony\\\\Component\\\\Console\\\\Command\\\\Command\",\"method\":\"run\",\"args\":\"Symfony\\\\Component\\\\Console\\\\Input\\\\ArgvInput, Symfony\\\\Component\\\\Console\\\\Output\\\\ConsoleOutput\"},{\"objectClass\":\"Codeception\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/symfony/console/Application.php\",\"line\":273,\"class\":\"Symfony\\\\Component\\\\Console\\\\Application\",\"method\":\"doRunCommand\",\"args\":\"Codeception\\\\Command\\\\Run, Symfony\\\\Component\\\\Console\\\\Input\\\\ArgvInput, Symfony\\\\Component\\\\Console\\\\Output\\\\ConsoleOutput\"},{\"objectClass\":\"Codeception\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/symfony/console/Application.php\",\"line\":149,\"class\":\"Symfony\\\\Component\\\\Console\\\\Application\",\"method\":\"doRun\",\"args\":\"Symfony\\\\Component\\\\Console\\\\Input\\\\ArgvInput, Symfony\\\\Component\\\\Console\\\\Output\\\\ConsoleOutput\"},{\"objectClass\":\"Codeception\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/src/Codeception/Application.php\",\"line\":117,\"class\":\"Symfony\\\\Component\\\\Console\\\\Application\",\"method\":\"run\",\"args\":\"Symfony\\\\Component\\\\Console\\\\Input\\\\ArgvInput, Symfony\\\\Component\\\\Console\\\\Output\\\\ConsoleOutput\"},{\"objectClass\":\"Codeception\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/app.php\",\"line\":46,\"class\":\"Codeception\\\\Application\",\"method\":\"run\",\"args\":null},{\"objectClass\":null,\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/app.php\",\"line\":47,\"class\":null,\"method\":\"{closure}\",\"args\":null},{\"objectClass\":null,\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/codecept\",\"line\":7,\"class\":null,\"method\":\"require\",\"args\":\"\\\"/var/www/site/commerce3/vendor/codeception/codeception/app.php\\\"\"}]', '2021-03-02 15:02:38', '2021-03-02 15:02:38', '839e7dbd-b369-4833-8bc9-762cb28ccc12', 'validation.key', '/var/www/site/commerce3/local/craftcms/cms/src/services/Config.php:168') ON DUPLICATE KEY UPDATE `lastOccurrence`='2021-03-02 15:02:37', `file`='/var/www/site/commerce3/local/craftcms/cms/src/services/Config.php', `line`=168, `message`='The auto-generated validation key stored at `/var/www/site/commerce3/local/pdaleramirez/super-payment-adjuster/tests/_craft/storage/runtime/validation.key` has been deprecated. Copy its value to the `securityKey` config setting in `config/general.php`.', `traces`='[{\"objectClass\":\"craft\\\\services\\\\Deprecator\",\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/services/Config.php\",\"line\":118,\"class\":\"craft\\\\services\\\\Deprecator\",\"method\":\"log\",\"args\":\"\\\"validation.key\\\", \\\"The auto-generated validation key stored at `/var/www/site/comme...\\\"\"},{\"objectClass\":\"craft\\\\services\\\\Config\",\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/services/Config.php\",\"line\":168,\"class\":\"craft\\\\services\\\\Config\",\"method\":\"getConfigSettings\",\"args\":\"\\\"general\\\"\"},{\"objectClass\":\"craft\\\\services\\\\Config\",\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/helpers/App.php\",\"line\":683,\"class\":\"craft\\\\services\\\\Config\",\"method\":\"getGeneral\",\"args\":null},{\"objectClass\":null,\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/config/app.web.php\",\"line\":11,\"class\":\"craft\\\\helpers\\\\App\",\"method\":\"webRequestConfig\",\"args\":null},{\"objectClass\":null,\"file\":null,\"line\":null,\"class\":\"craft\\\\test\\\\TestSetup\",\"method\":\"{closure}\",\"args\":null},{\"objectClass\":null,\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/di/Container.php\",\"line\":631,\"class\":null,\"method\":\"call_user_func_array\",\"args\":\"Closure, []\"},{\"objectClass\":\"yii\\\\di\\\\Container\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/BaseYii.php\",\"line\":349,\"class\":\"yii\\\\di\\\\Container\",\"method\":\"invoke\",\"args\":\"Closure, []\"},{\"objectClass\":null,\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/di/ServiceLocator.php\",\"line\":137,\"class\":\"yii\\\\BaseYii\",\"method\":\"createObject\",\"args\":\"Closure\"},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/base/Module.php\",\"line\":748,\"class\":\"yii\\\\di\\\\ServiceLocator\",\"method\":\"get\",\"args\":\"\\\"request\\\", true\"},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/web/Application.php\",\"line\":324,\"class\":\"yii\\\\base\\\\Module\",\"method\":\"get\",\"args\":\"\\\"request\\\", true\"},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/web/Application.php\",\"line\":161,\"class\":\"craft\\\\web\\\\Application\",\"method\":\"get\",\"args\":\"\\\"request\\\"\"},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/base/ApplicationTrait.php\",\"line\":1409,\"class\":\"yii\\\\web\\\\Application\",\"method\":\"getRequest\",\"args\":null},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/web/Application.php\",\"line\":90,\"class\":\"craft\\\\web\\\\Application\",\"method\":\"_preInit\",\"args\":null},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/base/BaseObject.php\",\"line\":109,\"class\":\"craft\\\\web\\\\Application\",\"method\":\"init\",\"args\":null},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/base/Application.php\",\"line\":212,\"class\":\"yii\\\\base\\\\BaseObject\",\"method\":\"__construct\",\"args\":\"[\\\"components\\\" => [\\\"config\\\" => craft\\\\services\\\\Config, \\\"api\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Api\\\"], \\\"assets\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Assets\\\"], \\\"assetIndexer\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\AssetIndexer\\\"], ...], \\\"id\\\" => \\\"craft-test\\\", \\\"name\\\" => \\\"Craft CMS\\\", \\\"version\\\" => \\\"3.6.6\\\", ...]\"},{\"objectClass\":\"craft\\\\web\\\\Application\",\"file\":null,\"line\":null,\"class\":\"yii\\\\base\\\\Application\",\"method\":\"__construct\",\"args\":\"[\\\"components\\\" => [\\\"config\\\" => craft\\\\services\\\\Config, \\\"api\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Api\\\"], \\\"assets\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Assets\\\"], \\\"assetIndexer\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\AssetIndexer\\\"], ...], \\\"id\\\" => \\\"craft-test\\\", \\\"name\\\" => \\\"Craft CMS\\\", \\\"version\\\" => \\\"3.6.6\\\", ...]\"},{\"objectClass\":\"ReflectionClass\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/di/Container.php\",\"line\":420,\"class\":\"ReflectionClass\",\"method\":\"newInstanceArgs\",\"args\":\"[[\\\"components\\\" => [\\\"config\\\" => craft\\\\services\\\\Config, \\\"api\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Api\\\"], \\\"assets\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Assets\\\"], \\\"assetIndexer\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\AssetIndexer\\\"], ...], \\\"id\\\" => \\\"craft-test\\\", \\\"name\\\" => \\\"Craft CMS\\\", \\\"version\\\" => \\\"3.6.6\\\", ...]]\"},{\"objectClass\":\"yii\\\\di\\\\Container\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/di/Container.php\",\"line\":171,\"class\":\"yii\\\\di\\\\Container\",\"method\":\"build\",\"args\":\"\\\"craft\\\\web\\\\Application\\\", [], [\\\"components\\\" => [\\\"config\\\" => craft\\\\services\\\\Config, \\\"api\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Api\\\"], \\\"assets\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Assets\\\"], \\\"assetIndexer\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\AssetIndexer\\\"], ...], \\\"id\\\" => \\\"craft-test\\\", \\\"name\\\" => \\\"Craft CMS\\\", \\\"version\\\" => \\\"3.6.6\\\", ...]\"},{\"objectClass\":\"yii\\\\di\\\\Container\",\"file\":\"/var/www/site/commerce3/vendor/yiisoft/yii2/BaseYii.php\",\"line\":365,\"class\":\"yii\\\\di\\\\Container\",\"method\":\"get\",\"args\":\"\\\"craft\\\\web\\\\Application\\\", [], [\\\"components\\\" => [\\\"config\\\" => craft\\\\services\\\\Config, \\\"api\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Api\\\"], \\\"assets\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Assets\\\"], \\\"assetIndexer\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\AssetIndexer\\\"], ...], \\\"id\\\" => \\\"craft-test\\\", \\\"name\\\" => \\\"Craft CMS\\\", \\\"version\\\" => \\\"3.6.6\\\", ...]\"},{\"objectClass\":null,\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/test/TestSetup.php\",\"line\":124,\"class\":\"yii\\\\BaseYii\",\"method\":\"createObject\",\"args\":\"[\\\"components\\\" => [\\\"config\\\" => craft\\\\services\\\\Config, \\\"api\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Api\\\"], \\\"assets\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\Assets\\\"], \\\"assetIndexer\\\" => [\\\"class\\\" => \\\"craft\\\\services\\\\AssetIndexer\\\"], ...], \\\"id\\\" => \\\"craft-test\\\", \\\"name\\\" => \\\"Craft CMS\\\", \\\"version\\\" => \\\"3.6.6\\\", ...]\"},{\"objectClass\":null,\"file\":\"/var/www/site/commerce3/local/craftcms/cms/src/test/Craft.php\",\"line\":121,\"class\":\"craft\\\\test\\\\TestSetup\",\"method\":\"warmCraft\",\"args\":null},{\"objectClass\":\"craft\\\\test\\\\Craft\",\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/src/Codeception/SuiteManager.php\",\"line\":83,\"class\":\"craft\\\\test\\\\Craft\",\"method\":\"_initialize\",\"args\":null},{\"objectClass\":\"Codeception\\\\SuiteManager\",\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/src/Codeception/Codecept.php\",\"line\":204,\"class\":\"Codeception\\\\SuiteManager\",\"method\":\"initialize\",\"args\":null},{\"objectClass\":\"Codeception\\\\Codecept\",\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/src/Codeception/Codecept.php\",\"line\":162,\"class\":\"Codeception\\\\Codecept\",\"method\":\"runSuite\",\"args\":\"[\\\"actor\\\" => \\\"UnitTester\\\", \\\"modules\\\" => [\\\"enabled\\\" => [\\\"\\\\craft\\\\test\\\\Craft\\\", \\\"Asserts\\\", \\\"\\\\Helper\\\\Unit\\\"], \\\"step_decorators\\\" => null, \\\"config\\\" => [\\\"\\\\craft\\\\test\\\\Craft\\\" => [\\\"configFile\\\" => \\\"tests/_craft/config/test.php\\\", \\\"entryUrl\\\" => \\\"http://test.craftcms.test/index.php\\\", \\\"projectConfig\\\" => [], \\\"migrations\\\" => [], ...]], \\\"depends\\\" => []], \\\"colors\\\" => true, \\\"bootstrap\\\" => false, ...], \\\"unit\\\", null\"},{\"objectClass\":\"Codeception\\\\Codecept\",\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/src/Codeception/Command/Run.php\",\"line\":532,\"class\":\"Codeception\\\\Codecept\",\"method\":\"run\",\"args\":\"\\\"unit\\\"\"},{\"objectClass\":\"Codeception\\\\Command\\\\Run\",\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/src/Codeception/Command/Run.php\",\"line\":407,\"class\":\"Codeception\\\\Command\\\\Run\",\"method\":\"runSuites\",\"args\":\"[\\\"unit\\\"], []\"},{\"objectClass\":\"Codeception\\\\Command\\\\Run\",\"file\":\"/var/www/site/commerce3/vendor/symfony/console/Command/Command.php\",\"line\":255,\"class\":\"Codeception\\\\Command\\\\Run\",\"method\":\"execute\",\"args\":\"Symfony\\\\Component\\\\Console\\\\Input\\\\ArgvInput, Symfony\\\\Component\\\\Console\\\\Output\\\\ConsoleOutput\"},{\"objectClass\":\"Codeception\\\\Command\\\\Run\",\"file\":\"/var/www/site/commerce3/vendor/symfony/console/Application.php\",\"line\":1009,\"class\":\"Symfony\\\\Component\\\\Console\\\\Command\\\\Command\",\"method\":\"run\",\"args\":\"Symfony\\\\Component\\\\Console\\\\Input\\\\ArgvInput, Symfony\\\\Component\\\\Console\\\\Output\\\\ConsoleOutput\"},{\"objectClass\":\"Codeception\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/symfony/console/Application.php\",\"line\":273,\"class\":\"Symfony\\\\Component\\\\Console\\\\Application\",\"method\":\"doRunCommand\",\"args\":\"Codeception\\\\Command\\\\Run, Symfony\\\\Component\\\\Console\\\\Input\\\\ArgvInput, Symfony\\\\Component\\\\Console\\\\Output\\\\ConsoleOutput\"},{\"objectClass\":\"Codeception\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/symfony/console/Application.php\",\"line\":149,\"class\":\"Symfony\\\\Component\\\\Console\\\\Application\",\"method\":\"doRun\",\"args\":\"Symfony\\\\Component\\\\Console\\\\Input\\\\ArgvInput, Symfony\\\\Component\\\\Console\\\\Output\\\\ConsoleOutput\"},{\"objectClass\":\"Codeception\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/src/Codeception/Application.php\",\"line\":117,\"class\":\"Symfony\\\\Component\\\\Console\\\\Application\",\"method\":\"run\",\"args\":\"Symfony\\\\Component\\\\Console\\\\Input\\\\ArgvInput, Symfony\\\\Component\\\\Console\\\\Output\\\\ConsoleOutput\"},{\"objectClass\":\"Codeception\\\\Application\",\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/app.php\",\"line\":46,\"class\":\"Codeception\\\\Application\",\"method\":\"run\",\"args\":null},{\"objectClass\":null,\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/app.php\",\"line\":47,\"class\":null,\"method\":\"{closure}\",\"args\":null},{\"objectClass\":null,\"file\":\"/var/www/site/commerce3/vendor/codeception/codeception/codecept\",\"line\":7,\"class\":null,\"method\":\"require\",\"args\":\"\\\"/var/www/site/commerce3/vendor/codeception/codeception/app.php\\\"\"}]', `dateCreated`='2021-03-02 15:02:38', `dateUpdated`='2021-03-02 15:02:38', `uid`='839e7dbd-b369-4833-8bc9-762cb28ccc12'
+2021-03-02 07:02:38 [trace][yii\db\Connection::close] Closing DB connection: mysql:host=development_mysql;dbname=commerce_test;port=3306
+2021-03-02 07:02:38 [info][yii\db\Connection::open] Opening DB connection: mysql:host=development_mysql;dbname=commerce_test;port=3306
+2021-03-02 07:02:38 [profile begin][yii\db\Connection::open] Opening DB connection: mysql:host=development_mysql;dbname=commerce_test;port=3306
+2021-03-02 07:02:38 [profile end][yii\db\Connection::open] Opening DB connection: mysql:host=development_mysql;dbname=commerce_test;port=3306
+2021-03-02 07:02:38 [info][yii\db\Command::query] SELECT *
+FROM `info`
+WHERE `id`=1
+LIMIT 1
+2021-03-02 07:02:38 [profile begin][yii\db\Command::query] SELECT *
+FROM `info`
+WHERE `id`=1
+LIMIT 1
+2021-03-02 07:02:38 [profile end][yii\db\Command::query] SELECT *
+FROM `info`
+WHERE `id`=1
+LIMIT 1
+2021-03-02 07:02:38 [info][yii\db\Command::query] SELECT `s`.`id`, `s`.`name`, `s`.`handle`, `s`.`language`, `s`.`primary`, `s`.`hasUrls`, `s`.`baseUrl`, `s`.`sortOrder`, `s`.`uid`, `s`.`dateCreated`, `s`.`dateUpdated`, `s`.`groupId`, `s`.`enabled`
+FROM `sites` `s`
+INNER JOIN `sitegroups` `sg` ON `sg`.`id` = `s`.`groupId`
+WHERE (`s`.`dateDeleted` IS NULL) AND (`sg`.`dateDeleted` IS NULL)
+ORDER BY `sg`.`name`, `s`.`sortOrder`
+2021-03-02 07:02:38 [profile begin][yii\db\Command::query] SELECT `s`.`id`, `s`.`name`, `s`.`handle`, `s`.`language`, `s`.`primary`, `s`.`hasUrls`, `s`.`baseUrl`, `s`.`sortOrder`, `s`.`uid`, `s`.`dateCreated`, `s`.`dateUpdated`, `s`.`groupId`, `s`.`enabled`
+FROM `sites` `s`
+INNER JOIN `sitegroups` `sg` ON `sg`.`id` = `s`.`groupId`
+WHERE (`s`.`dateDeleted` IS NULL) AND (`sg`.`dateDeleted` IS NULL)
+ORDER BY `sg`.`name`, `s`.`sortOrder`
+2021-03-02 07:02:38 [profile end][yii\db\Command::query] SELECT `s`.`id`, `s`.`name`, `s`.`handle`, `s`.`language`, `s`.`primary`, `s`.`hasUrls`, `s`.`baseUrl`, `s`.`sortOrder`, `s`.`uid`, `s`.`dateCreated`, `s`.`dateUpdated`, `s`.`groupId`, `s`.`enabled`
+FROM `sites` `s`
+INNER JOIN `sitegroups` `sg` ON `sg`.`id` = `s`.`groupId`
+WHERE (`s`.`dateDeleted` IS NULL) AND (`sg`.`dateDeleted` IS NULL)
+ORDER BY `sg`.`name`, `s`.`sortOrder`
+2021-03-02 07:02:38 [info][yii\db\Command::query] SELECT `path`, `value`
+FROM `projectconfig`
+ORDER BY `path`
+2021-03-02 07:02:38 [profile begin][yii\db\Command::query] SELECT `path`, `value`
+FROM `projectconfig`
+ORDER BY `path`
+2021-03-02 07:02:38 [profile end][yii\db\Command::query] SELECT `path`, `value`
+FROM `projectconfig`
+ORDER BY `path`
+2021-03-02 07:02:38 [trace][yii\base\Application::bootstrap] Bootstrap with yii\shell\Bootstrap::bootstrap()
+2021-03-02 07:02:38 [info][yii\db\Command::query] SELECT `id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `installDate`, `licensedEdition`
+FROM `plugins`
+2021-03-02 07:02:38 [profile begin][yii\db\Command::query] SELECT `id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `installDate`, `licensedEdition`
+FROM `plugins`
+2021-03-02 07:02:38 [profile end][yii\db\Command::query] SELECT `id`, `handle`, `version`, `schemaVersion`, `licenseKeyStatus`, `installDate`, `licensedEdition`
+FROM `plugins`
+2021-03-02 07:02:38 [warning][craft\web\User::_validateUserAgentAndIp] Request didn’t meet the user agent and IP requirement for maintaining a user session.
