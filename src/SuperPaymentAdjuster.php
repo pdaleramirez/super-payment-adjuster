@@ -17,6 +17,7 @@ use pdaleramirez\superpaymentadjuster\plugin\Routes;
 use pdaleramirez\superpaymentadjuster\plugin\Services;
 use Craft;
 use craft\base\Plugin;
+use pdaleramirez\superpaymentadjuster\services\App;
 use yii\base\Event;
 
 /**
@@ -33,9 +34,9 @@ class SuperPaymentAdjuster extends Plugin
     use Routes;
 
     /**
-     * @var SuperPaymentAdjuster
+     * @var App
      */
-    public static $plugin;
+    public static $app;
 
     /**
      * @var string
@@ -59,7 +60,7 @@ class SuperPaymentAdjuster extends Plugin
         $this->_setPluginComponents();
         $this->_registerCpRoutes();
 
-        self::$plugin = $this;
+        self::$app = $this;
 
         Event::on(
             OrderAdjustments::class,
