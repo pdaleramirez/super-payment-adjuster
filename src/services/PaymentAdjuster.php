@@ -14,6 +14,10 @@ use craft\commerce\adjusters\Discount;
 use craft\commerce\adjusters\Shipping;
 use craft\commerce\adjusters\Tax;
 use craft\base\Component;
+use craft\commerce\base\Gateway;
+use craft\commerce\elements\Order;
+use pdaleramirez\superpaymentadjuster\elements\PaymentAdjuster as PaymentAdjusterElement;
+use pdaleramirez\superpaymentadjuster\records\PaymentAdjuster as PaymentAdjusterRecord;
 
 /**
  * Class PaymentAdjuster
@@ -30,5 +34,20 @@ class PaymentAdjuster extends Component
             Discount::ADJUSTMENT_TYPE,
             Tax::ADJUSTMENT_TYPE
         ];
+    }
+    
+    public function getAdjustmentTotal(Order $order, PaymentAdjusterElement $paymentAdjuster)
+    {
+        $amount = $paymentAdjuster->baseAmount;
+        if ($paymentAdjuster->amountType === PaymentAdjusterRecord::AMOUNT_PERCENT) {
+            $amount = $order->getTotal() * ($paymentAdjuster->percentAmount / 100);
+        }
+
+        $total = $amount;
+        if ($paymentAdjuster->method === PaymentAdjusterRecord::METHOD_DEDUCT) {
+            $total = $amount * -1;
+        }
+        
+        return $total;
     }
 }

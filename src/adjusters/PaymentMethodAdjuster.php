@@ -9,6 +9,7 @@ use craft\commerce\elements\Order;
 use craft\commerce\models\OrderAdjustment;
 use pdaleramirez\superpaymentadjuster\elements\PaymentAdjuster;
 use pdaleramirez\superpaymentadjuster\records\PaymentAdjuster as PaymentAdjusterRecord;
+use pdaleramirez\superpaymentadjuster\SuperPaymentAdjuster;
 
 class PaymentMethodAdjuster extends Component implements AdjusterInterface
 {
@@ -19,27 +20,19 @@ class PaymentMethodAdjuster extends Component implements AdjusterInterface
         if ($order->getGateway() !== null) {
             $gatewayHandle = $order->getGateway()->handle;
 
-            $gateways = PaymentAdjuster::find()->status('enabled')
+            $paymentAdjusters = PaymentAdjuster::find()->status('enabled')
                 ->where(['gatewayHandle' => $gatewayHandle])->all();
 
-            /** @var PaymentAdjuster $gateway */
-            foreach ($gateways as $gateway) {
+            /** @var PaymentAdjuster $paymentAdjuster */
+            foreach ($paymentAdjusters as $paymentAdjuster) {
                 $adjustment = new OrderAdjustment;
-                $adjustment->type = $gateway->type;
-                $adjustment->name = $gateway->name;
-                $adjustment->description = $gateway->description;
+                $adjustment->type = $paymentAdjuster->type;
+                $adjustment->name = $paymentAdjuster->name;
+                $adjustment->description = $paymentAdjuster->description;
 
-                $amount = $gateway->baseAmount;
-                if ($gateway->amountType === PaymentAdjusterRecord::AMOUNT_PERCENT) {
-                    $amount = $order->getTotal() * ($gateway->percentAmount / 100);
-                }
 
-                $total = $amount;
-                if ($gateway->method === PaymentAdjusterRecord::METHOD_DEDUCT) {
-                    $total = $amount * -1;
-                }
-                $adjustment->name = $gateway->name;
-                $adjustment->amount = $total;
+                $adjustment->name = $paymentAdjuster->name;
+                $adjustment->amount = SuperPaymentAdjuster::$app->paymentAdjuster->getAdjustmentTotal($order, $paymentAdjuster);
                 $adjustment->setOrder($order);
 
                 $adjustments[] = $adjustment;
