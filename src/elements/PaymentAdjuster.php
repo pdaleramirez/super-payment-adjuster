@@ -134,8 +134,8 @@ class PaymentAdjuster extends Element
     public function getAmountTypes(): array
     {
         return [
-            PaymentAdjusterRecord::AMOUNT_FLAT => "Flat Amount Off Order",
-            PaymentAdjusterRecord::AMOUNT_PERCENT => "Percentage Off %"
+            PaymentAdjusterRecord::AMOUNT_FLAT => "Flat Amount Order",
+            PaymentAdjusterRecord::AMOUNT_PERCENT => "Percentage %"
         ];
     }
 }

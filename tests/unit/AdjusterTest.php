@@ -38,7 +38,8 @@ class AdjusterTest extends Unit
         self::assertEquals(20, $amount);
         
         $paymentAdjuster->amountType = PaymentAdjusterRecord::AMOUNT_PERCENT;
+        $paymentAdjuster->percentAmount = 35;
         $amount = $this->paymentAdjuster->getAdjustmentTotal($order, $paymentAdjuster);
-        self::assertEquals(20, $amount);
+        self::assertEquals(35.0, $amount);
     }
 }
