@@ -2,6 +2,8 @@
 
 Adds ability to adjust order amount based on the payment method selected.
 
+![Screenshot](resources/img/super-payment-adjuster-demo.gif)
+
 ## Features
 - Adds ability to adjust order amount based on the payment method selected.
 
