@@ -1,8 +1,9 @@
 # Super Payment Adjuster for Craft CMS 3.x
 
+Adds ability to adjust order amount based on the payment method selected.
+
 ## Features
 - Adds ability to adjust order amount based on the payment method selected.
-
 
 - The plugin allows you to add multiple adjustment for different payment gateways. 
   
