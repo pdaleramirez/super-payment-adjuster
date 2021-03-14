@@ -142,7 +142,8 @@
                     targetPrefix: 'to-option-'
                 }) }}
             </div>
-            <div id="to-option-paymentAdjusterFlatAmount" class="flex-grow hidden">
+            <div id="to-paymentAdjusterFlatAmount" class="to-amount flex-grow 
+            {% if element.amountType is not empty and element.amountType != 'paymentAdjusterFlatAmount' %}hidden{% endif %}">
                 {{ forms.text({
                     id: 'baseAmount',
                     name: 'baseAmount',
@@ -151,7 +152,8 @@
                     size: 10
                 }) }}
             </div>
-            <div id="to-option-paymentAdjusterPercentAmount" class="flex-grow hidden">
+            <div id="to-paymentAdjusterPercentAmount" class="to-amount flex-grow 
+            {% if element.amountType != 'paymentAdjusterPercentAmount' %}hidden{% endif %}">
                 {{ forms.text({
                     id: 'percentAmount',
                     name: 'percentAmount',
@@ -174,7 +176,15 @@
 
 {% endblock %}
 {% js "new Craft.HandleGenerator('#title', '#handle');" %}
-
+{% js %}
+    
+    jQuery("#amount-type").change(function(ev) {
+        let value = jQuery(this).val();
+    
+        jQuery('.to-amount').addClass('hidden');
+        jQuery('#to-' + value).removeClass('hidden');
+    });
+{% endjs %}
 {% block details %}
     <div class="meta">
         {{ forms.lightswitchField({
