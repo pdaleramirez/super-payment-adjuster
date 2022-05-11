@@ -2,7 +2,7 @@
     "name": "pdaleramirez/super-payment-adjuster",
     "description": "Adds ability to adjust order amount based on the payment method selected.",
     "type": "craft-plugin",
-    "version": "1.0.10",
+    "version": "1.2",
     "keywords": [
         "craft",
         "cms",
@@ -22,10 +22,10 @@
         }
     ],
     "require": {
-        "craftcms/cms": "^3.0.0"
+        "craftcms/cms": "^4.0"
     },
     "require-dev": {
-      "craftcms/cms": "^3.2.0",
+      "craftcms/cms": "^4.0",
       "codeception/codeception": "^3.0",
       "vlucas/phpdotenv": "^3.0"
     },
@@ -42,5 +42,15 @@
         "documentationUrl": "https://github.com/pdaleramirez/super-payment-adjuster/blob/master/README.md",
         "changelogUrl": "https://raw.githubusercontent.com/pdaleramirez/super-payment-adjuster/master/CHANGELOG.md",
         "class": "pdaleramirez\\superpaymentadjuster\\SuperPaymentAdjuster"
+    },
+    "config": {
+        "sort-packages": true,
+        "platform": {
+            "php": "8.0.2"
+        },
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true,
+            "craftcms/plugin-installer": true
+        }
     }
 }

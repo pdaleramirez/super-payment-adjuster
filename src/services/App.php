@@ -7,10 +7,9 @@ use craft\base\Component;
 
 class App extends Component
 {
-    /** @var PaymentAdjuster $paymentAdjuster */
-    public $paymentAdjuster;
+    public PaymentAdjuster $paymentAdjuster;
     
-    public function init()
+    public function init(): void
     {
         $this->paymentAdjuster = new PaymentAdjuster();
     }

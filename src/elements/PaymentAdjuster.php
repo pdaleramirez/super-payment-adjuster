@@ -22,7 +22,7 @@ class PaymentAdjuster extends Element
     public $baseAmount;
     public $percentAmount;
 
-    public function __toString()
+    public function __toString(): string
     {
         return (string) $this->title ?: (string) $this->id;
     }
@@ -37,7 +37,7 @@ class PaymentAdjuster extends Element
         return true;
     }
 
-    public function getCpEditUrl()
+    public function getCpEditUrl(): null|string
     {
         return UrlHelper::cpUrl('super-payment-adjuster/payment-adjusters/edit/' . $this->id);
     }
@@ -94,7 +94,7 @@ class PaymentAdjuster extends Element
         return $attributes;
     }
 
-    public function afterSave(bool $isNew)
+    public function afterSave(bool $isNew): void
     {
         if (!$isNew) {
             $record = PaymentAdjusterRecord::findOne($this->id);
@@ -107,6 +107,9 @@ class PaymentAdjuster extends Element
             $record->id = $this->id;
         }
 
+        $baseAmount = (int) $this->baseAmount;
+        $percentAmount = (int) $this->percentAmount;
+
         $record->name = $this->name;
         $record->handle = $this->handle;
         $record->gatewayHandle = $this->gatewayHandle;
@@ -114,8 +117,8 @@ class PaymentAdjuster extends Element
         $record->method = $this->method;
         $record->type = $this->type;
         $record->amountType = $this->amountType;
-        $record->baseAmount = abs($this->baseAmount);
-        $record->percentAmount = abs($this->percentAmount);
+        $record->baseAmount = abs($baseAmount);
+        $record->percentAmount = abs($percentAmount);
         $record->save(false);
 
         $this->id = $record->id;

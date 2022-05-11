@@ -41,17 +41,17 @@ class SuperPaymentAdjuster extends Plugin
     /**
      * @var string
      */
-    public $schemaVersion = '1.0.0';
+    public string $schemaVersion = '1.0.0';
 
     /**
      * @var bool
      */
-    public $hasCpSettings = true;
+    public bool $hasCpSettings = true;
 
     /**
      * @var bool
      */
-    public $hasCpSection = true;
+    public bool $hasCpSection = true;
 
     public function init()
     {

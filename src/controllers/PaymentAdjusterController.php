@@ -25,7 +25,7 @@ use pdaleramirez\superpaymentadjuster\web\assets\PaymentAdjusterIndexAsset;
 class PaymentAdjusterController extends Controller
 {
 
-    protected $allowAnonymous = ['index', 'do-something'];
+    protected int|bool|array $allowAnonymous = ['index'];
 
     /**
      * @return mixed
