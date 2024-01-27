@@ -5,6 +5,7 @@ namespace pdaleramirez\superpaymentadjuster\elements;
 use Craft;
 use craft\base\Element;
 use craft\elements\db\ElementQueryInterface;
+use craft\elements\User;
 use craft\helpers\UrlHelper;
 use pdaleramirez\superpaymentadjuster\elements\db\PaymentAdjusterQuery;
 use pdaleramirez\superpaymentadjuster\records\PaymentAdjuster as PaymentAdjusterRecord;
@@ -140,5 +141,26 @@ class PaymentAdjuster extends Element
             PaymentAdjusterRecord::AMOUNT_FLAT => "Flat Amount Order",
             PaymentAdjusterRecord::AMOUNT_PERCENT => "Percentage %"
         ];
+    }
+
+    public function canView(User $user): bool
+    {
+        return true;
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function canSave(User $user): bool
+    {
+        return true;
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function canDelete(User $user): bool
+    {
+        return true;
     }
 }
