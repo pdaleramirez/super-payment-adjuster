@@ -87,17 +87,4 @@ class SuperPaymentAdjuster extends Plugin
 
         return $ret;
     }
-
-    /**
-     * @inheritdoc
-     */
-    protected function settingsHtml(): string
-    {
-        return Craft::$app->view->renderTemplate(
-            'super-payment-adjuster/settings',
-            [
-                'settings' => $this->getSettings()
-            ]
-        );
-    }
 }
